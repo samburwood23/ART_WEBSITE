@@ -1,0 +1,166 @@
+.main {
+  padding: 4rem 2rem 6rem;
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter {
+  background: none;
+  border: 1px solid var(--color-border);
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  transition: all 0.2s;
+}
+
+.filter:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.filterActive {
+  background: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.item {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+}
+
+.imgWrap {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: var(--color-border);
+  margin-bottom: 0.75rem;
+}
+
+.imgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.item:hover .imgWrap img {
+  transform: scale(1.04);
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.itemTitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.itemMeta {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.92);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.lightboxContent {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  max-width: 900px;
+  width: 100%;
+}
+
+.lightboxContent img {
+  max-height: 80vh;
+  max-width: 60%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.lightboxInfo {
+  color: #fff;
+  padding-top: 0.5rem;
+}
+
+.lightboxInfo h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.lightboxInfo p {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 600px) {
+  .lightboxContent {
+    flex-direction: column;
+  }
+  .lightboxContent img {
+    max-width: 100%;
+  }
+}
