@@ -9,10 +9,10 @@ export default function Home() {
     <main>
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <p className={styles.heroEyebrow}>Artist &amp; Painter</p>
-          <h1 className={styles.heroTitle}>Samantha<br />Burwood</h1>
+          <p className={styles.heroEyebrow}>Artist</p>
+          <h1 className={styles.heroTitle}>Sam<br />Burwood</h1>
           <p className={styles.heroSub}>
-            Oil, watercolour, and charcoal works exploring light, form, and everyday stillness.
+            Oil, acrylic marker, and geometric abstraction.
           </p>
           <Link to="/gallery" className={styles.heroCta}>View Gallery</Link>
         </div>
@@ -25,11 +25,7 @@ export default function Home() {
             {featured.map(work => (
               <Link to="/gallery" key={work.id} className={styles.card}>
                 <div className={styles.imgWrap}>
-                  <img src={work.thumb} alt={work.title} loading="lazy" />
-                </div>
-                <div className={styles.cardInfo}>
-                  <span className={styles.cardTitle}>{work.title}</span>
-                  <span className={styles.cardMeta}>{work.medium}, {work.year}</span>
+                  <img src={work.thumb} alt="" loading="lazy" />
                 </div>
               </Link>
             ))}

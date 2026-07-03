@@ -33,11 +33,7 @@ export default function Gallery() {
           {filtered.map(work => (
             <button key={work.id} className={styles.item} onClick={() => openLightbox(work)}>
               <div className={styles.imgWrap}>
-                <img src={work.thumb} alt={work.title} loading="lazy" />
-              </div>
-              <div className={styles.itemInfo}>
-                <span className={styles.itemTitle}>{work.title}</span>
-                <span className={styles.itemMeta}>{work.medium}</span>
+                <img src={work.thumb} alt="" loading="lazy" />
               </div>
             </button>
           ))}
