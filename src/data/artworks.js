@@ -111,4 +111,4 @@ export const artworks = [
   },
 ]
 
-export const categories = ['All', ...new Set(artworks.map(a => a.category))]
+export const categories = ['Painting', 'Markers']

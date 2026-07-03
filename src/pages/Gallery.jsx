@@ -3,12 +3,10 @@ import { artworks, categories } from '../data/artworks'
 import styles from './Gallery.module.css'
 
 export default function Gallery() {
-  const [activeCategory, setActiveCategory] = useState('All')
+  const [activeCategory, setActiveCategory] = useState('Painting')
   const [lightbox, setLightbox] = useState(null)
 
-  const filtered = activeCategory === 'All'
-    ? artworks
-    : artworks.filter(a => a.category === activeCategory)
+  const filtered = artworks.filter(a => a.category === activeCategory)
 
   const openLightbox = (work) => setLightbox(work)
   const closeLightbox = () => setLightbox(null)
