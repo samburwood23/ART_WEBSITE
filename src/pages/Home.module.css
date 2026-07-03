@@ -1,19 +1,25 @@
 .hero {
   min-height: calc(90vh - var(--nav-height));
-  display: flex;
-  align-items: center;
-  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid var(--color-border);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
 }
 
 .heroInner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  width: 100%;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-right: 1px solid var(--color-border);
 }
 
 .heroEyebrow {
-  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-muted);
@@ -22,116 +28,141 @@
 
 .heroTitle {
   font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-size: clamp(3.5rem, 8vw, 7rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.02em;
   margin-bottom: 2rem;
+  color: var(--color-text);
 }
 
 .heroSub {
-  max-width: 36ch;
+  max-width: 32ch;
   color: var(--color-text-muted);
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.8;
   margin-bottom: 2.5rem;
+  letter-spacing: 0.02em;
 }
 
 .heroCta {
   display: inline-block;
-  padding: 0.75rem 2rem;
-  background: var(--color-text);
-  color: var(--color-bg);
-  font-size: 0.85rem;
-  letter-spacing: 0.06em;
+  padding: 0.65rem 1.5rem;
+  border: 1px solid var(--color-border);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  transition: opacity 0.2s;
+  color: var(--color-text-muted);
+  transition: all 0.2s;
+  align-self: flex-start;
 }
 
 .heroCta:hover {
-  opacity: 0.8;
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.heroRight {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.heroRightTop {
+  border-bottom: 1px solid var(--color-border);
 }
 
 .featured {
-  padding: 5rem 2rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .sectionTitle {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
-  font-weight: 400;
-  margin-bottom: 2.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.textLink {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  transition: color 0.2s;
+}
+
+.textLink:hover {
+  color: var(--color-text);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
 }
 
 .card {
   display: block;
+  border-right: 1px solid var(--color-border);
+}
+
+.card:last-child {
+  border-right: none;
 }
 
 .imgWrap {
   aspect-ratio: 4/5;
   overflow: hidden;
-  background: var(--color-border);
-  margin-bottom: 0.75rem;
+  background: var(--color-surface);
 }
 
 .imgWrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s ease;
+  opacity: 0.9;
 }
 
 .card:hover .imgWrap img {
   transform: scale(1.03);
-}
-
-.cardInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.cardTitle {
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.cardMeta {
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-}
-
-.seeAll {
-  margin-top: 3rem;
-  text-align: center;
-}
-
-.textLink {
-  font-size: 0.875rem;
-  letter-spacing: 0.04em;
-  border-bottom: 1px solid var(--color-text);
-  padding-bottom: 2px;
-  transition: opacity 0.2s;
-}
-
-.textLink:hover {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .heroInner {
+    border-right: none;
+    padding: 3rem 1.5rem;
+  }
+  .heroRight {
+    display: none;
+  }
   .grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .sectionHeader {
+    padding: 1.25rem 1.5rem;
   }
 }
 

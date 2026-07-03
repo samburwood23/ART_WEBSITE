@@ -1,46 +1,64 @@
 .main {
-  padding: 5rem 2rem 6rem;
   min-height: calc(100vh - var(--nav-height));
 }
 
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.pageHeader {
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pageLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: start;
+}
+
+.imageCol {
+  border-right: 1px solid var(--color-border);
 }
 
 .imgWrap {
   aspect-ratio: 3/4;
   overflow: hidden;
-  background: var(--color-border);
+  background: var(--color-surface);
 }
 
 .imgWrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.8;
 }
 
-.eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-  margin-bottom: 1rem;
+.textCol {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .title {
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 400;
   line-height: 1.05;
   margin-bottom: 2.5rem;
+  color: var(--color-text);
 }
 
 .bio {
@@ -48,7 +66,9 @@
   flex-direction: column;
   gap: 1.25rem;
   color: var(--color-text-muted);
-  line-height: 1.8;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.85;
   margin-bottom: 3rem;
 }
 
@@ -63,13 +83,14 @@
 .detail {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
-  font-size: 0.875rem;
+  gap: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
 }
 
 .detailLabel {
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
@@ -77,9 +98,18 @@
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+  }
+  .imageCol {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
   }
   .imgWrap {
     aspect-ratio: 4/3;
+  }
+  .textCol {
+    padding: 2rem 1.5rem;
+  }
+  .pageHeader {
+    padding: 1.25rem 1.5rem;
   }
 }

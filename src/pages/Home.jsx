@@ -9,18 +9,25 @@ export default function Home() {
     <main>
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <p className={styles.heroEyebrow}>Artist</p>
+          <p className={styles.heroEyebrow}>Artist — Sheffield</p>
           <h1 className={styles.heroTitle}>Sam<br />Burwood</h1>
           <p className={styles.heroSub}>
             Geometric abstract art. Inspired by life.
           </p>
           <Link to="/gallery" className={styles.heroCta}>View Gallery</Link>
         </div>
+        <div className={styles.heroRight}>
+          <div className={styles.heroRightTop} />
+          <div />
+        </div>
       </section>
 
       <section className={styles.featured}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Selected Works</h2>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionTitle}>Selected Works</span>
+            <Link to="/gallery" className={styles.textLink}>See all →</Link>
+          </div>
           <div className={styles.grid}>
             {featured.map(work => (
               <Link to="/gallery" key={work.id} className={styles.card}>
@@ -29,9 +36,6 @@ export default function Home() {
                 </div>
               </Link>
             ))}
-          </div>
-          <div className={styles.seeAll}>
-            <Link to="/gallery" className={styles.textLink}>See all works →</Link>
           </div>
         </div>
       </section>

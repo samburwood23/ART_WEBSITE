@@ -347,27 +347,29 @@ export default function Writing() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <h1 className={styles.title}>Writing</h1>
-        <div className={styles.tabs}>
-          <button
-            className={`${styles.tab} ${tab === 'everyone' ? styles.tabActive : ''}`}
-            onClick={() => setTab('everyone')}
-          >
-            For Everyone
-          </button>
-          <button
-            className={`${styles.tab} ${tab === 'technical' ? styles.tabActive : ''}`}
-            onClick={() => setTab('technical')}
-          >
-            Technical
-          </button>
+        <div className={styles.pageHeader}>
+          <span className={styles.title}>Writing</span>
+          <div className={styles.tabs}>
+            <button
+              className={`${styles.tab} ${tab === 'everyone' ? styles.tabActive : ''}`}
+              onClick={() => setTab('everyone')}
+            >
+              For Everyone
+            </button>
+            <button
+              className={`${styles.tab} ${tab === 'technical' ? styles.tabActive : ''}`}
+              onClick={() => setTab('technical')}
+            >
+              Technical
+            </button>
+          </div>
         </div>
 
         {posts.length === 0 ? (
           <p className={styles.empty}>Coming soon.</p>
         ) : tab === 'everyone' ? (
           forEveryone.map(post => (
-            <article key={post.id} className={styles.post}>
+            <article key={post.id} className={styles.postWrap}>
               <h2 className={styles.postTitle}>{post.title}</h2>
               <div className={styles.body}>
                 {post.content.map((block, i) => {
@@ -387,7 +389,7 @@ export default function Writing() {
           ))
         ) : (
           technical.map(post => (
-            <article key={post.id} className={styles.post}>
+            <article key={post.id} className={styles.postWrap}>
               <h2 className={styles.postTitle}>{post.title}</h2>
               <div className={`${styles.body} ${styles.markdown}`}>
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>

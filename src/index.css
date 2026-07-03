@@ -5,13 +5,13 @@
 }
 
 :root {
-  --color-bg: #fafaf8;
-  --color-surface: #ffffff;
-  --color-text: #1a1a1a;
-  --color-text-muted: #6b6b6b;
-  --color-border: #e8e8e4;
-  --color-accent: #2a2a2a;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-bg: #111110;
+  --color-surface: #1a1a18;
+  --color-text: #e8e6e0;
+  --color-text-muted: #888880;
+  --color-border: #2a2a28;
+  --color-accent: #e8e6e0;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
   --font-serif: 'Playfair Display', Georgia, serif;
   --max-width: 1200px;
   --nav-height: 64px;
@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;

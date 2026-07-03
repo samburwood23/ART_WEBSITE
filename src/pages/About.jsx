@@ -4,6 +4,9 @@ export default function About() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
+        <div className={styles.pageHeader}>
+          <span className={styles.pageLabel}>About</span>
+        </div>
         <div className={styles.grid}>
           <div className={styles.imageCol}>
             <div className={styles.imgWrap}>
@@ -14,11 +17,10 @@ export default function About() {
             </div>
           </div>
           <div className={styles.textCol}>
-            <p className={styles.eyebrow}>About</p>
             <h1 className={styles.title}>Sam<br />Burwood</h1>
             <div className={styles.bio}>
               <p>
-                Artist based in Sheffield. Working in oil, acrylic marker, and geometric abstraction.
+                Artist based in Sheffield. Working in oil, acrylic markers, and geometric abstraction.
               </p>
               <p>
                 C in GCSE Art but god loves a trier.
