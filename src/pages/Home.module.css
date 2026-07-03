@@ -145,8 +145,8 @@
 .writingCard {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  padding: 2.5rem 3rem;
+  gap: 1rem;
+  padding: 3.5rem 3rem;
   border-right: 1px solid var(--color-border);
   transition: background 0.2s;
 }
@@ -169,7 +169,7 @@
 
 .writingTitle {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.35;
   color: var(--color-text);
@@ -177,8 +177,8 @@
 
 .writingExcerpt {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  line-height: 1.8;
+  font-size: 0.78rem;
+  line-height: 1.85;
   color: var(--color-text-muted);
   flex: 1;
 }
