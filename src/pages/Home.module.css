@@ -1,7 +1,7 @@
 .hero {
-  min-height: calc(90vh - var(--nav-height));
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  min-height: calc(80vh - var(--nav-height));
+  display: flex;
+  align-items: flex-end;
   border-bottom: 1px solid var(--color-border);
   max-width: var(--max-width);
   margin: 0 auto;
@@ -13,8 +13,6 @@
   padding: 4rem 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  border-right: 1px solid var(--color-border);
 }
 
 .heroEyebrow {
@@ -64,16 +62,7 @@
   color: var(--color-text);
 }
 
-.heroRight {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-
-.heroRightTop {
-  border-bottom: 1px solid var(--color-border);
-}
-
-.featured {
+.featured, .writing {
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -147,22 +136,82 @@
   opacity: 1;
 }
 
+/* Writing section */
+.writingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.writingCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2.5rem 3rem;
+  border-right: 1px solid var(--color-border);
+  transition: background 0.2s;
+}
+
+.writingCard:last-child {
+  border-right: none;
+}
+
+.writingCard:hover {
+  background: var(--color-surface);
+}
+
+.writingLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.writingTitle {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--color-text);
+}
+
+.writingExcerpt {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  flex: 1;
+}
+
+.readMore {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  transition: color 0.2s;
+}
+
+.writingCard:hover .readMore {
+  color: var(--color-text);
+}
+
 @media (max-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
   .heroInner {
-    border-right: none;
     padding: 3rem 1.5rem;
-  }
-  .heroRight {
-    display: none;
   }
   .grid {
     grid-template-columns: 1fr 1fr;
   }
   .sectionHeader {
     padding: 1.25rem 1.5rem;
+  }
+  .writingGrid {
+    grid-template-columns: 1fr;
+  }
+  .writingCard {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 2rem 1.5rem;
   }
 }
 
