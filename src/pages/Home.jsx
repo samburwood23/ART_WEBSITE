@@ -12,7 +12,7 @@ export default function Home() {
           <p className={styles.heroEyebrow}>Artist</p>
           <h1 className={styles.heroTitle}>Sam<br />Burwood</h1>
           <p className={styles.heroSub}>
-            Oil, acrylic marker, and geometric abstraction.
+            Engineer, painter, and person who has spent too much time arguing with image models about what "gestural oil paint texture" means.
           </p>
           <Link to="/gallery" className={styles.heroCta}>View Gallery</Link>
         </div>
