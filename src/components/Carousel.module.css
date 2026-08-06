@@ -1,0 +1,103 @@
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2.5rem 0;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 4/5;
+  border: 3px solid var(--color-accent-cyan);
+  box-shadow:
+    6px 6px 0 var(--color-accent-pink),
+    -2px -2px 0 var(--color-accent-lime);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.slideActive {
+  opacity: 1;
+}
+
+.counter {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  font-family: var(--font-pixel);
+  font-size: 1.1rem;
+  color: var(--color-accent-cyan);
+  background: rgba(0,0,0,0.7);
+  padding: 0.1rem 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 2px solid var(--color-accent-pink);
+  color: var(--color-accent-pink);
+  font-family: var(--font-pixel);
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  line-height: 1;
+  z-index: 10;
+  transition: all 0.15s;
+}
+
+.arrow:hover {
+  background: var(--color-accent-pink);
+  color: #000;
+}
+
+.arrowLeft {
+  left: 0;
+}
+
+.arrowRight {
+  right: 0;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 2px solid var(--color-accent-pink);
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.dotActive {
+  background: var(--color-accent-pink);
+}
+
+@media (max-width: 600px) {
+  .arrow {
+    font-size: 1.1rem;
+    padding: 0.35rem 0.5rem;
+  }
+  .frame {
+    max-width: 100%;
+  }
+}

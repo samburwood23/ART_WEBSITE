@@ -5,16 +5,18 @@
 }
 
 :root {
-  --color-bg: #111110;
-  --color-surface: #1a1a18;
-  --color-text: #e8e6e0;
-  --color-text-muted: #888880;
-  --color-border: #2a2a28;
-  --color-accent: #e8e6e0;
-  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --max-width: 1200px;
-  --nav-height: 64px;
+  --color-bg: #000033;
+  --color-surface: #00001a;
+  --color-text: #ffffff;
+  --color-text-muted: #aaaacc;
+  --color-border: #ff00ff;
+  --color-accent-pink: #ff00ff;
+  --color-accent-cyan: #00ffff;
+  --color-accent-lime: #ccff00;
+  --color-accent-yellow: #ffff00;
+  --font-pixel: 'VT323', monospace;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --max-width: 1100px;
 }
 
 html {
@@ -27,6 +29,9 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(255,0,255,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(0,255,255,0.07) 0%, transparent 60%);
 }
 
 a {
