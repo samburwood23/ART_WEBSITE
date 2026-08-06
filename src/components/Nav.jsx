@@ -5,8 +5,8 @@ export default function Nav() {
     <header className={styles.header}>
       <div className={styles.marqueeWrap}>
         <span className={styles.marquee}>
-          ✦ SAM BURWOOD ✦ GEOMETRIC ABSTRACT ART ✦ SHEFFIELD ✦ INSPIRED BY LIFE ✦ &nbsp;
-          ✦ SAM BURWOOD ✦ GEOMETRIC ABSTRACT ART ✦ SHEFFIELD ✦ INSPIRED BY LIFE ✦ &nbsp;
+          ✦ ART THAT TOOK LONGER THAN IT LOOKS ✦ SAM BURWOOD ✦ SHEFFIELD ✦ C IN GCSE ART ✦ &nbsp;
+          ✦ ART THAT TOOK LONGER THAN IT LOOKS ✦ SAM BURWOOD ✦ SHEFFIELD ✦ C IN GCSE ART ✦ &nbsp;
         </span>
       </div>
       <div className={styles.titleBar}>
