@@ -4,33 +4,56 @@
   padding: 0 2rem 4rem;
 }
 
+.header {
+  padding: 2rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
 .sectionLabel {
   font-family: var(--font-pixel);
   font-size: 1.5rem;
   letter-spacing: 0.12em;
   color: var(--color-accent-yellow);
   text-align: center;
-  padding: 2rem 0 0.5rem;
 }
 
-.carouselSection {
-  border: 2px solid rgba(255, 0, 255, 0.3);
-  margin: 2rem 0;
-  padding-bottom: 2rem;
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.gallerySection {
-  border: 2px solid rgba(0, 255, 255, 0.3);
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
+.filter {
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: var(--color-accent-cyan);
+  border: 2px solid var(--color-accent-cyan);
+  padding: 0.3rem 1.2rem;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter:hover {
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.filterActive {
+  background: var(--color-accent-cyan);
+  color: #000;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3px;
-  padding: 1.5rem;
   background: rgba(0,0,51,0.5);
+  margin: 1rem 0 2rem;
 }
 
 .cell {
@@ -76,24 +99,40 @@
   letter-spacing: 0.06em;
 }
 
-.allWorksLink {
-  text-align: center;
-  padding: 2rem 0 1rem;
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-.allWorksBtn {
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border: 2px solid var(--color-accent-pink);
+}
+
+.close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
   font-family: var(--font-pixel);
-  font-size: 1.3rem;
-  letter-spacing: 0.1em;
-  color: var(--color-accent-cyan);
-  border: 2px solid var(--color-accent-cyan);
-  padding: 0.6rem 2rem;
+  font-size: 1.2rem;
+  color: var(--color-accent-pink);
+  background: transparent;
+  border: 2px solid var(--color-accent-pink);
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  letter-spacing: 0.08em;
   transition: all 0.2s;
-  display: inline-block;
 }
 
-.allWorksBtn:hover {
-  background: var(--color-accent-cyan);
+.close:hover {
+  background: var(--color-accent-pink);
   color: #000;
 }
 
