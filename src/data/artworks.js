@@ -289,6 +289,36 @@ export const artworks = [
     src: 'https://res.cloudinary.com/fcwtlbmz/image/upload/v1789802135/33212_dxbify.jpg',
     thumb: 'https://res.cloudinary.com/fcwtlbmz/image/upload/w_400,q_70/v1789802135/33212_dxbify.jpg',
   },
+  {
+    id: 30,
+    title: 'Painting No. 24',
+    year: 2026,
+    medium: 'Painting',
+    dimensions: '',
+    category: 'Painting',
+    src: 'https://res.cloudinary.com/fcwtlbmz/image/upload/v1790594295/PXL_20260927_145013932_k7zi1c.jpg',
+    thumb: 'https://res.cloudinary.com/fcwtlbmz/image/upload/w_400,q_70/v1790594295/PXL_20260927_145013932_k7zi1c.jpg',
+  },
+  {
+    id: 31,
+    title: 'Painting No. 25',
+    year: 2026,
+    medium: 'Painting',
+    dimensions: '',
+    category: 'Painting',
+    src: 'https://res.cloudinary.com/fcwtlbmz/image/upload/v1790594297/PXL_20260923_181147462_fxsntt.jpg',
+    thumb: 'https://res.cloudinary.com/fcwtlbmz/image/upload/w_400,q_70/v1790594297/PXL_20260923_181147462_fxsntt.jpg',
+  },
+  {
+    id: 32,
+    title: 'Painting No. 26',
+    year: 2026,
+    medium: 'Painting',
+    dimensions: '',
+    category: 'Painting',
+    src: 'https://res.cloudinary.com/fcwtlbmz/image/upload/v1790594309/PXL_20260925_165622704_duzt8q.jpg',
+    thumb: 'https://res.cloudinary.com/fcwtlbmz/image/upload/w_400,q_70/v1790594309/PXL_20260925_165622704_duzt8q.jpg',
+  },
 ]
 
 export const categories = ['Painting', 'Markers']

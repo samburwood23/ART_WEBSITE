@@ -3,7 +3,7 @@ import Carousel from '../components/Carousel'
 import { artworks } from '../data/artworks'
 import styles from './Home.module.css'
 
-const featured = artworks.filter(a => a.id >= 25 && a.id <= 29)
+const featured = artworks.filter(a => a.id >= 25 && a.id <= 32)
 
 export default function Home() {
   return (
