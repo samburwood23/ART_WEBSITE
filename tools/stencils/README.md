@@ -9,8 +9,9 @@ photos, scans of sketches, or a photo of one of your paintings.
 
 ## One-time setup
 
-You only do this once per computer. Commands go in the **Terminal** app
-(on Mac: Cmd+Space, type "Terminal"). On Windows, use **PowerShell**.
+You only do this once per computer. Commands go in a terminal: on Linux,
+press Ctrl+Alt+T or search for "Terminal"; on Mac, press Cmd+Space and type
+"Terminal"; on Windows, use **PowerShell**.
 
 **1. Check you have Python 3.10 or newer**
 
@@ -18,8 +19,16 @@ You only do this once per computer. Commands go in the **Terminal** app
 python3 --version
 ```
 
-If it says "command not found", install it from [python.org](https://www.python.org/downloads/).
-On Windows, type `python` wherever this guide says `python3`.
+Linux almost always has Python already. On Ubuntu, Debian or Mint you may
+also need the venv and pip packages (other distros usually include them):
+
+```bash
+sudo apt install python3-venv python3-pip
+```
+
+On Mac or Windows, if it says "command not found", install Python from
+[python.org](https://www.python.org/downloads/). On Windows, type `python`
+wherever this guide says `python3`.
 
 **2. Go to this folder**
 
@@ -37,7 +46,7 @@ so it can't clash with anything else on your computer.
 
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\Activate.ps1
+source .venv/bin/activate          # Linux and Mac. Windows: .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
@@ -47,12 +56,13 @@ Get your token from [replicate.com/account/api-tokens](https://replicate.com/acc
 Never paste it into a file in this repo.
 
 ```bash
-export REPLICATE_API_TOKEN=r8_your_token_here          # Mac
+export REPLICATE_API_TOKEN=r8_your_token_here          # Linux and Mac
 $env:REPLICATE_API_TOKEN="r8_your_token_here"          # Windows
 ```
 
-This only lasts until you close the Terminal window. To make it permanent on
-a Mac, add the `export` line to the end of `~/.zshrc`.
+This only lasts until you close the terminal window. To make it permanent,
+add the `export` line to the end of `~/.bashrc` on Linux or `~/.zshrc` on a
+Mac, then open a new terminal.
 
 **Check your spend cap.** Each image costs a few pence. Set a monthly limit
 in your Replicate account settings before running big batches.
@@ -79,10 +89,12 @@ python3 stencil.py generate "circuit traces radiating from an enso circle" --num
 python3 stencil.py convert runs/<the new folder>/generated_02.png
 ```
 
+To open the results folder: `xdg-open runs` on Linux, or `open runs` on a Mac.
+
 **Convert your own image:**
 
 ```bash
-python3 stencil.py convert ~/Desktop/sketch.jpg --invert
+python3 stencil.py convert ~/Pictures/sketch.jpg --invert
 ```
 
 Everything goes into the `runs/` folder, one folder per run. Git ignores it,
@@ -175,6 +187,7 @@ you'll use most:
 | --- | --- |
 | `REPLICATE_API_TOKEN is not set` | Do setup step 4 again (it resets when Terminal closes) |
 | `No module named ...` | You forgot `source .venv/bin/activate` |
+| `ensurepip is not available` (Linux) | Run `sudo apt install python3-venv`, delete the `.venv` folder, and repeat setup step 3 |
 | Replicate says an input is invalid | Your model's inputs may differ. Check the API tab on your model's Replicate page and edit `inputs` in `generate.py` |
 | Stencil is mostly black or mostly white | Try `--threshold`, or `--invert` |
 | Too many tiny bridges | Raise `--min-feature` and `--min-island` to simplify the design |
