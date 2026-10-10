@@ -1,0 +1,7 @@
+# Generated images and stencils (each run makes a new folder in here)
+runs/
+# Python virtual environment
+.venv/
+__pycache__/
+# Never commit your API token
+.env
