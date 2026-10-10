@@ -1,0 +1,5 @@
+numpy>=1.26
+scipy>=1.11
+pillow>=10.0
+opencv-python-headless>=4.8
+replicate>=0.25
