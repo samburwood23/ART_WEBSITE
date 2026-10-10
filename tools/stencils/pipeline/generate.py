@@ -12,11 +12,12 @@ MODEL_VERSION = "83c1d8ab5db77b2ce2a81ecff7a813f0dba258e53736b42c014f1e1fa75893f
 TRIGGER_WORD = "SAMHART"
 
 # Added to every prompt so the model draws something that can be cut:
-# solid shapes, two tones, nothing in between.
+# solid shapes, two tones, nothing in between. It only says what we *want*:
+# Flux (the model SAMHART is built on) has no real sense of "no", so
+# "no gradients" can actually make gradients more likely.
 STENCIL_STYLE = (
-    "bold black and white stencil design, high contrast, "
-    "solid flat black shapes on a pure white background, "
-    "no gradients, no shading, no texture, no text"
+    "two-colour stencil print, flat solid black ink on plain white paper, "
+    "thick bold lines, chunky shapes, crisp hard edges, graphic"
 )
 
 
@@ -29,7 +30,7 @@ def build_prompt(prompt, stencil_style=True):
 
 
 def generate(prompt, out_dir, num_outputs=1, seed=None, aspect_ratio="2:3",
-             lora_scale=1.0, stencil_style=True):
+             lora_scale=1.0, guidance=3.5, stencil_style=True):
     """Run SAMHART and save the images into out_dir. Returns their paths."""
     if not os.environ.get("REPLICATE_API_TOKEN"):
         raise SystemExit(
@@ -43,6 +44,7 @@ def generate(prompt, out_dir, num_outputs=1, seed=None, aspect_ratio="2:3",
         "aspect_ratio": aspect_ratio,
         "output_format": "png",
         "lora_scale": lora_scale,
+        "guidance_scale": guidance,
     }
     if seed is not None:
         inputs["seed"] = seed

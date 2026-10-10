@@ -115,7 +115,7 @@ For every stencil there's a folder with a picture of each pipeline step:
 | `stencil_preview.svg` | A filled preview of the sprayed result |
 | `report.json` | Island counts and every setting used, so you can recreate it |
 
-`generation.json` in the run folder records the prompt, the seed settings and
+`generation.json` in the run folder records the prompt, every setting sent to Replicate and
 the Replicate prediction ID.
 
 ## How the pipeline works
@@ -126,7 +126,7 @@ see its result, and swap one out without touching the others. Each stage is
 its own file in `pipeline/`:
 
 1. **`generate.py`** sends your prompt to SAMHART. It adds your trigger word
-   and stencil wording ("bold black and white, no gradients...") so the model
+   and stencil wording ("two-colour stencil print, flat solid black ink...") so the model
    draws shapes that can be cut, then downloads the images straight away,
    because Replicate's links expire.
 2. **`prepare.py`** places the image on the sheet in millimetres. A slight
@@ -162,6 +162,7 @@ you'll use most:
 | `--num 4` | 1 | How many images to generate (1–4) |
 | `--seed 42` | random | Recreate the same image later |
 | `--lora-scale 1.3` | 1.0 | How strongly your style is applied |
+| `--guidance 4.5` | 3.5 | How closely it follows the prompt. Raise it if images aren't black and white enough |
 | `--width 300 --height 400` | 210 × 297 (A4) | Sheet size in mm |
 | `--margin 20` | 15 | Solid border around the design, in mm |
 | `--invert` | off | Spray the light parts instead of the dark |
@@ -191,4 +192,4 @@ you'll use most:
 | Replicate says an input is invalid | Your model's inputs may differ. Check the API tab on your model's Replicate page and edit `inputs` in `generate.py` |
 | Stencil is mostly black or mostly white | Try `--threshold`, or `--invert` |
 | Too many tiny bridges | Raise `--min-feature` and `--min-island` to simplify the design |
-| Images are grey and soft, not graphic | Raise `--lora-scale` a little, or add "linocut" or "screen print" to the prompt |
+| Images are grey and soft, not graphic | Try `--guidance 4.5`, or add "linocut" or "screen print" to the prompt |

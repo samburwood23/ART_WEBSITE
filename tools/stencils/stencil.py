@@ -79,7 +79,7 @@ def convert(image_path, out_dir, args):
 def cmd_generate(args):
     folder = new_run_folder(args.prompt)
     generate(args.prompt, folder, args.num, args.seed, args.aspect_ratio,
-             args.lora_scale, stencil_style=not args.raw_prompt)
+             args.lora_scale, args.guidance, stencil_style=not args.raw_prompt)
     print(f"\nNext: python stencil.py convert {folder}/generated_01.png")
 
 
@@ -92,7 +92,7 @@ def cmd_convert(args):
 def cmd_make(args):
     folder = new_run_folder(args.prompt)
     for image in generate(args.prompt, folder, args.num, args.seed, args.aspect_ratio,
-                          args.lora_scale, stencil_style=not args.raw_prompt):
+                          args.lora_scale, args.guidance, stencil_style=not args.raw_prompt):
         convert(image, folder / f"stencil_{image.stem}", args)
 
 
@@ -104,8 +104,11 @@ def add_generate_options(p):
     p.add_argument("--aspect-ratio", default="2:3", help="image shape, e.g. 2:3, 1:1, 3:2 (default 2:3)")
     p.add_argument("--lora-scale", type=float, default=1.0,
                    help="how strongly to apply your style, 0-2 (default 1.0)")
+    p.add_argument("--guidance", type=float, default=3.5,
+                   help="how closely to follow the prompt, 0-10 (default 3.5; try 4-5 "
+                        "if images aren't black and white enough)")
     p.add_argument("--raw-prompt", action="store_true",
-                   help="don't add the 'black and white stencil' wording to the prompt")
+                   help="don't add the stencil-print wording to the prompt")
 
 
 def add_convert_options(p):
