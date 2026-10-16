@@ -1,138 +1,71 @@
 .main {
-  padding: 5rem 2rem 6rem;
-  min-height: calc(100vh - var(--nav-height));
-}
-
-.container {
   max-width: var(--max-width);
   margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: start;
+.box {
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.eyebrow {
-  font-size: 0.75rem;
+.sectionLabel {
+  font-family: var(--font-pixel);
+  font-size: 1.5rem;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-  margin-bottom: 1rem;
-}
-
-.title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 400;
-  line-height: 1.05;
+  color: var(--color-accent-yellow);
   margin-bottom: 1.5rem;
 }
 
-.sub {
-  color: var(--color-text-muted);
-  line-height: 1.8;
-  max-width: 36ch;
-  margin-bottom: 2.5rem;
+.body {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
-.contactLinks {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  font-size: 0.875rem;
-}
-
-.contactLinks > div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.label {
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-}
-
-.contactLinks a {
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
-}
-
-.contactLinks a:hover {
-  border-color: var(--color-text);
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.field label {
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-}
-
-.field input,
-.field textarea {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  padding: 0.75rem 1rem;
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  color: var(--color-text);
-  outline: none;
-  transition: border-color 0.2s;
-  resize: vertical;
-}
-
-.field input:focus,
-.field textarea:focus {
-  border-color: var(--color-text);
-}
-
-.submit {
-  align-self: flex-start;
-  background: var(--color-text);
-  color: var(--color-bg);
-  border: none;
-  padding: 0.85rem 2.25rem;
-  font-size: 0.85rem;
+.email {
+  font-family: var(--font-pixel);
+  font-size: 1.2rem;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
-  transition: opacity 0.2s;
+  color: var(--color-accent-cyan);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-accent-cyan);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+  word-break: break-all;
 }
 
-.submit:hover {
-  opacity: 0.8;
+.email:hover {
+  color: var(--color-accent-pink);
+  border-bottom-color: var(--color-accent-pink);
 }
 
-.thanks {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  color: var(--color-text-muted);
-  padding-top: 2rem;
+.footer {
+  text-align: center;
+  font-family: var(--font-pixel);
+  font-size: 1.2rem;
+  color: var(--color-accent-pink);
+  letter-spacing: 0.1em;
+  padding: 2rem 0;
+  border-top: 2px solid var(--color-accent-pink);
+  margin-top: 4rem;
 }
 
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+@media (max-width: 600px) {
+  .main {
+    padding: 2rem 1rem;
+  }
+  .box {
+    padding: 2rem 1rem;
   }
 }

@@ -37,6 +37,7 @@
   color: var(--color-accent-cyan);
   letter-spacing: 0.08em;
   text-shadow: 3px 3px 0 var(--color-accent-pink);
+  text-decoration: none;
 }
 
 .subtitle {
@@ -44,6 +45,26 @@
   font-size: 1.2rem;
   color: var(--color-accent-lime);
   letter-spacing: 0.06em;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: var(--color-accent-cyan);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.navLink:hover,
+.navActive {
+  border-bottom-color: var(--color-accent-cyan);
 }
 
 @media (max-width: 600px) {
