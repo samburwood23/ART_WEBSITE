@@ -13,7 +13,7 @@ export default function AllWorks() {
   return (
     <main className={styles.main}>
       <div className={styles.header}>
-        <div className={styles.sectionLabel}>♥ ALL WORKS ♥</div>
+        <div className={styles.sectionLabel}>✦ ALL WORKS ✦</div>
         <div className={styles.filters}>
           {['All', ...categories].map(cat => (
             <button

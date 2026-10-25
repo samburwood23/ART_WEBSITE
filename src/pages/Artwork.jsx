@@ -6,9 +6,9 @@ import styles from './Artwork.module.css'
 const EMAIL = 'samanthaburwood@gmail.com'
 
 const STATUS = {
-  available: { label: 'AVAILABLE', className: 'statusAvailable', cta: '♥ ENQUIRE ABOUT THIS PIECE ♥' },
-  sold: { label: 'SOLD', className: 'statusSold', cta: '♥ ASK ABOUT A SIMILAR PIECE ♥' },
-  'on request': { label: 'PRICE ON REQUEST', className: 'statusRequest', cta: '♥ ENQUIRE ABOUT THIS PIECE ♥' },
+  available: { label: 'AVAILABLE', className: 'statusAvailable', cta: '✦ ENQUIRE ABOUT THIS PIECE ✦' },
+  sold: { label: 'SOLD', className: 'statusSold', cta: '✦ ASK ABOUT A SIMILAR PIECE ✦' },
+  'on request': { label: 'PRICE ON REQUEST', className: 'statusRequest', cta: '✦ ENQUIRE ABOUT THIS PIECE ✦' },
 }
 
 function enquiryLink(work) {
@@ -79,7 +79,7 @@ export default function Artwork() {
 
         <div className={styles.infoCol}>
           <div className={styles.heading}>
-            <span className={styles.category}>♥ {work.category.toUpperCase()} ♥</span>
+            <span className={styles.category}>✦ {work.category.toUpperCase()} ✦</span>
             <h1 className={styles.title}>{work.title}</h1>
           </div>
 
@@ -117,7 +117,7 @@ export default function Artwork() {
       </div>
 
       <section className={styles.more}>
-        <div className={styles.sectionLabel}>♥ MORE WORKS ♥</div>
+        <div className={styles.sectionLabel}>✦ MORE WORKS ✦</div>
         <div className={styles.moreGrid}>
           {more.map(w => (
             <Link key={w.id} to={`/works/${w.id}`} className={styles.moreCell}>

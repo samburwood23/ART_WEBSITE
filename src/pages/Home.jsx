@@ -9,12 +9,12 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.carouselSection}>
-        <div className={styles.sectionLabel}>♥ FEATURED WORKS ♥</div>
+        <div className={styles.sectionLabel}>✦ FEATURED WORKS ✦</div>
         <Carousel images={featured} />
       </section>
 
       <section className={styles.gallerySection}>
-        <div className={styles.sectionLabel}>♥ SELECTED WORKS ♥</div>
+        <div className={styles.sectionLabel}>✦ SELECTED WORKS ✦</div>
         <div className={styles.grid}>
           {featured.map(work => (
             <Link key={work.id} to={`/works/${work.id}`} className={styles.cell}>
@@ -26,7 +26,7 @@ export default function Home() {
           ))}
         </div>
         <div className={styles.allWorksLink}>
-          <Link to="/works" className={styles.allWorksBtn}>♥ VIEW ALL WORKS ♥</Link>
+          <Link to="/works" className={styles.allWorksBtn}>✦ VIEW ALL WORKS ✦</Link>
         </div>
       </section>
     </main>
