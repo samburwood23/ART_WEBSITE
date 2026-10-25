@@ -5,7 +5,7 @@
   text-align: center;
   font-family: var(--font-pixel);
   font-size: 1.2rem;
-  color: var(--color-accent-pink);
+  color: var(--color-accent-pink-soft);
   letter-spacing: 0.1em;
   border-top: 2px solid var(--color-accent-pink);
 }

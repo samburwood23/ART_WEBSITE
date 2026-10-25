@@ -12,10 +12,10 @@
   width: 100%;
   max-width: 600px;
   aspect-ratio: 4/5;
-  border: 3px solid var(--color-accent-cyan);
+  border: 3px solid var(--color-accent-pink);
   box-shadow:
-    6px 6px 0 var(--color-accent-pink),
-    -2px -2px 0 var(--color-accent-lime);
+    6px 6px 0 var(--color-accent-pink-deep),
+    -2px -2px 0 var(--color-accent-cyan);
   overflow: hidden;
   background: var(--color-surface);
 }
@@ -40,7 +40,7 @@
   right: 0.75rem;
   font-family: var(--font-pixel);
   font-size: 1.1rem;
-  color: var(--color-accent-cyan);
+  color: var(--color-accent-pink);
   background: rgba(0,0,0,0.7);
   padding: 0.1rem 0.5rem;
   letter-spacing: 0.08em;

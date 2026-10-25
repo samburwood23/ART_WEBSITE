@@ -5,15 +5,15 @@
 }
 
 :root {
-  --color-bg: #000033;
-  --color-surface: #00001a;
-  --color-text: #ffffff;
-  --color-text-muted: #aaaacc;
-  --color-border: #ff00ff;
-  --color-accent-pink: #ff00ff;
-  --color-accent-cyan: #00ffff;
-  --color-accent-lime: #ccff00;
-  --color-accent-yellow: #ffff00;
+  --color-bg: #1a0012;
+  --color-surface: #12000c;
+  --color-text: #ffe6f3;
+  --color-text-muted: #ffb3dc;
+  --color-border: #ff4fb0;
+  --color-accent-pink: #ff4fb0;
+  --color-accent-pink-soft: #ffb3dc;
+  --color-accent-pink-deep: #7a0046;
+  --color-accent-cyan: #7ef9ff;
   --font-pixel: 'VT323', monospace;
   --font-mono: 'IBM Plex Mono', monospace;
   --max-width: 1100px;
@@ -30,8 +30,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(255,0,255,0.07) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(0,255,255,0.07) 0%, transparent 60%);
+    radial-gradient(ellipse at 20% 50%, rgba(255,79,176,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255,179,220,0.05) 0%, transparent 60%);
 }
 
 a {

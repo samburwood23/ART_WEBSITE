@@ -8,19 +8,19 @@
   font-family: var(--font-pixel);
   font-size: 1.5rem;
   letter-spacing: 0.12em;
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-pink);
   text-align: center;
   padding: 2rem 0 0.5rem;
 }
 
 .carouselSection {
-  border: 2px solid rgba(255, 0, 255, 0.3);
+  border: 2px solid rgba(255, 79, 176, 0.3);
   margin: 2rem 0;
   padding-bottom: 2rem;
 }
 
 .gallerySection {
-  border: 2px solid rgba(0, 255, 255, 0.3);
+  border: 2px solid rgba(255, 79, 176, 0.3);
   padding-bottom: 2rem;
   margin-bottom: 2rem;
 }
@@ -30,14 +30,14 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 3px;
   padding: 1.5rem;
-  background: rgba(0,0,51,0.5);
+  background: rgba(26, 0, 18,0.5);
 }
 
 .cell {
   position: relative;
   aspect-ratio: 1;
   overflow: hidden;
-  border: 1px solid rgba(255, 0, 255, 0.2);
+  border: 1px solid rgba(255, 79, 176, 0.2);
   cursor: pointer;
 }
 
@@ -79,7 +79,7 @@
 .cellCategory {
   font-family: var(--font-pixel);
   font-size: 0.9rem;
-  color: var(--color-accent-cyan);
+  color: var(--color-accent-pink);
   letter-spacing: 0.06em;
 }
 
@@ -92,16 +92,18 @@
   font-family: var(--font-pixel);
   font-size: 1.3rem;
   letter-spacing: 0.1em;
-  color: var(--color-accent-cyan);
-  border: 2px solid var(--color-accent-cyan);
+  color: #000;
+  background: var(--color-accent-pink);
+  border: 2px solid var(--color-accent-pink);
   padding: 0.6rem 2rem;
+  box-shadow: 4px 4px 0 var(--color-accent-cyan);
   transition: all 0.2s;
   display: inline-block;
 }
 
 .allWorksBtn:hover {
-  background: var(--color-accent-cyan);
-  color: #000;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--color-accent-cyan);
 }
 
 
