@@ -50,16 +50,6 @@
   border-bottom-color: var(--color-accent-pink);
 }
 
-.footer {
-  text-align: center;
-  font-family: var(--font-pixel);
-  font-size: 1.2rem;
-  color: var(--color-accent-pink);
-  letter-spacing: 0.1em;
-  padding: 2rem 0;
-  border-top: 2px solid var(--color-accent-pink);
-  margin-top: 4rem;
-}
 
 @media (max-width: 600px) {
   .main {
