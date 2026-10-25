@@ -16,7 +16,7 @@ export default function Home() {
             <span className={styles.lineOrange}>ABSTRACT</span>
             <span className={styles.lineRed}>ART ☆</span>
           </h1>
-          <p className={styles.blurb}>Paintings named after computing terms. Made in Sheffield.</p>
+          <p className={styles.blurb}>Art that took longer than it looks.</p>
           <div className={styles.heroButtons}>
             <Link to="/works" className={styles.primaryBtn}>✦ SEE THE WORK</Link>
             <Link to="/contact" className={styles.secondaryBtn}>COMMISSION ME</Link>

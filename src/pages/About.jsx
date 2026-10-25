@@ -17,7 +17,7 @@ const spec = [
 
 const timeline = [
   ['2025', 'Markers No. 1–6', 'A first series in acrylic markers.'],
-  ['2026', 'The computing paintings', 'Mixed media on 50 × 60 cm, from Stack Trace and Hotfix through to Triage and Dark Fibre.'],
+  ['2026', 'Mixed media series', 'Mixed media on 50 × 60 cm, from Stack Trace and Hotfix through to Triage and Dark Fibre.'],
   ['2026', 'First large works', 'Watchdog and Bus Topology, each 100 × 150 cm.'],
   ['2026', 'The quantum set', 'Superposition, Entanglement, Decoherence and Ground State.'],
 ]
@@ -38,9 +38,8 @@ export default function About() {
           </p>
           <p>C in GCSE Art but god loves a trier.</p>
           <p>
-            Most of my paintings are named after computing terms, like Stack Trace, Hotfix, Failover
-            and Memory Leak. The day job leaks into the studio: circuit linework, rings and hard edges
-            laid over scraped, dragged colour.
+            My paintings are built from circuit linework, rings and hard edges laid over scraped,
+            dragged colour.
           </p>
 
           <div className={styles.spec}>
