@@ -16,7 +16,7 @@ export default function Nav() {
         <Link to="/" className={styles.title}>SAM BURWOOD</Link>
         <span className={styles.subtitle}>☆ GEOMETRIC ABSTRACT ART ☆</span>
         <nav className={styles.nav}>
-          <Link to="/works" className={`${styles.navLink} ${pathname === '/works' ? styles.navActive : ''}`}>ALL WORKS</Link>
+          <Link to="/works" className={`${styles.navLink} ${pathname.startsWith('/works') ? styles.navActive : ''}`}>ALL WORKS</Link>
           <Link to="/contact" className={`${styles.navLink} ${pathname === '/contact' ? styles.navActive : ''}`}>CONTACT</Link>
         </nav>
       </div>

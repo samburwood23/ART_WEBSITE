@@ -17,12 +17,12 @@ export default function Home() {
         <div className={styles.sectionLabel}>✦ SELECTED WORKS ✦</div>
         <div className={styles.grid}>
           {featured.map(work => (
-            <div key={work.id} className={styles.cell}>
-              <img src={work.thumb} alt="" loading="lazy" />
+            <Link key={work.id} to={`/works/${work.id}`} className={styles.cell}>
+              <img src={work.thumb} alt={work.title} loading="lazy" />
               <div className={styles.cellOverlay}>
                 <span className={styles.cellCategory}>{work.category}</span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <div className={styles.allWorksLink}>
