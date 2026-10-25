@@ -163,6 +163,15 @@
   margin-bottom: 0.5rem;
   letter-spacing: 0.04em;
 }
+.lightboxInfo .description {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  letter-spacing: 0;
+  margin-top: 1.5rem;
+  max-width: 32ch;
+}
 
 @media (max-width: 768px) {
   .grid {
