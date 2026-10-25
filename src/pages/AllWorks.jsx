@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { artworks, categories } from '../data/artworks'
 import styles from './AllWorks.module.css'
 
@@ -8,8 +9,6 @@ export default function AllWorks() {
   const filtered = activeCategory === 'All'
     ? artworks
     : artworks.filter(a => a.category === activeCategory)
-
-  const [lightbox, setLightbox] = useState(null)
 
   return (
     <main className={styles.main}>
@@ -30,21 +29,14 @@ export default function AllWorks() {
 
       <div className={styles.grid}>
         {filtered.map(work => (
-          <div key={work.id} className={styles.cell} onClick={() => setLightbox(work)}>
-            <img src={work.thumb} alt="" loading="lazy" />
+          <Link key={work.id} to={`/works/${work.id}`} className={styles.cell}>
+            <img src={work.thumb} alt={work.title} loading="lazy" />
             <div className={styles.cellOverlay}>
-              <span className={styles.cellCategory}>{work.category}</span>
+              <span className={styles.cellCategory}>{work.title}</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-
-      {lightbox && (
-        <div className={styles.lightbox} onClick={() => setLightbox(null)}>
-          <button className={styles.close} onClick={() => setLightbox(null)}>✕ CLOSE</button>
-          <img src={lightbox.src} alt="" onClick={e => e.stopPropagation()} />
-        </div>
-      )}
 
       <footer className={styles.footer}>
         <span>✦ SAM BURWOOD ✦ SHEFFIELD ✦ {new Date().getFullYear()} ✦</span>

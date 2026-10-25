@@ -99,43 +99,6 @@
   letter-spacing: 0.06em;
 }
 
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.92);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.lightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-  border: 2px solid var(--color-accent-pink);
-}
-
-.close {
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-  font-family: var(--font-pixel);
-  font-size: 1.2rem;
-  color: var(--color-accent-pink);
-  background: transparent;
-  border: 2px solid var(--color-accent-pink);
-  padding: 0.3rem 1rem;
-  cursor: pointer;
-  letter-spacing: 0.08em;
-  transition: all 0.2s;
-}
-
-.close:hover {
-  background: var(--color-accent-pink);
-  color: #000;
-}
-
 .footer {
   text-align: center;
   font-family: var(--font-pixel);
