@@ -50,6 +50,9 @@ export default function Gallery() {
               <p>{lightbox.medium}</p>
               <p>{lightbox.dimensions}</p>
               <p>{lightbox.year}</p>
+              {lightbox.description && (
+                <p className={styles.description}>{lightbox.description}</p>
+              )}
             </div>
           </div>
         </div>

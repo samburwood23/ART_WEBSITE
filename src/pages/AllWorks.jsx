@@ -32,7 +32,7 @@ export default function AllWorks() {
           <Link key={work.id} to={`/works/${work.id}`} className={styles.cell}>
             <img src={work.thumb} alt={work.title} loading="lazy" />
             <div className={styles.cellOverlay}>
-              <span className={styles.cellCategory}>{work.category}</span>
+              <span className={styles.cellCategory}>{work.title}</span>
             </div>
           </Link>
         ))}
