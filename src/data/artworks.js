@@ -1,3 +1,9 @@
+// Optional fields per artwork, shown on its page at /works/:id when set:
+//   status: 'available' | 'sold' | 'on request'
+//   price: e.g. '£450' (only shown while status is 'available')
+//   dimensions: e.g. '60 × 80 cm'
+//   framed: e.g. 'Yes' or 'Unframed'
+//   description: a sentence or two about the piece
 export const artworks = [
   {
     id: 1,
