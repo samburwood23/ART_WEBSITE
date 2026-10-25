@@ -23,13 +23,13 @@
   font-family: var(--font-pixel);
   font-size: 1.15rem;
   letter-spacing: 0.08em;
-  color: var(--color-accent-cyan);
+  color: var(--color-accent-pink);
   border-bottom: 2px solid transparent;
   transition: border-color 0.2s;
 }
 
 .navLink:hover {
-  border-bottom-color: var(--color-accent-cyan);
+  border-bottom-color: var(--color-accent-pink);
 }
 
 .count {
@@ -88,7 +88,7 @@
   font-family: var(--font-pixel);
   font-size: 1.15rem;
   letter-spacing: 0.12em;
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-pink);
 }
 
 .title {
@@ -97,8 +97,8 @@
   font-size: 3.5rem;
   line-height: 1;
   letter-spacing: 0.04em;
-  color: var(--color-accent-cyan);
-  text-shadow: 3px 3px 0 var(--color-accent-pink);
+  color: var(--color-text);
+  text-shadow: var(--glow-pink);
 }
 
 .status {
@@ -116,13 +116,13 @@
   background: currentColor;
 }
 
-.statusAvailable { color: var(--color-accent-lime); }
+.statusAvailable { color: var(--color-accent-orange); }
 .statusSold { color: var(--color-accent-pink); }
-.statusRequest { color: var(--color-accent-cyan); }
+.statusRequest { color: var(--color-accent-pink-soft); }
 
 .details {
-  border-top: 1px solid rgba(255, 0, 255, 0.3);
-  border-bottom: 1px solid rgba(255, 0, 255, 0.3);
+  border-top: 1px solid rgba(255, 79, 176, 0.3);
+  border-bottom: 1px solid rgba(255, 79, 176, 0.3);
   padding: 1.25rem 0;
   display: flex;
   flex-direction: column;
@@ -148,7 +148,7 @@
   font-family: var(--font-pixel);
   font-size: 2.1rem;
   letter-spacing: 0.04em;
-  color: var(--color-accent-lime);
+  color: var(--color-accent-pink-soft);
 }
 
 .enquire {
@@ -165,13 +165,13 @@
   font-size: 1.5rem;
   letter-spacing: 0.1em;
   padding: 0.75rem 1.25rem;
-  box-shadow: 4px 4px 0 var(--color-accent-cyan);
+  box-shadow: 0 0 20px var(--color-accent-pink), 4px 4px 0 var(--color-accent-red);
   transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .enquireBtn:hover {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 var(--color-accent-cyan);
+  box-shadow: 0 0 20px var(--color-accent-pink), 2px 2px 0 var(--color-accent-red);
 }
 
 .more {
@@ -182,7 +182,7 @@
   font-family: var(--font-pixel);
   font-size: 1.5rem;
   letter-spacing: 0.12em;
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-pink);
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -196,7 +196,7 @@
 .moreCell {
   aspect-ratio: 1;
   overflow: hidden;
-  border: 1px solid rgba(255, 0, 255, 0.2);
+  border: 1px solid rgba(255, 79, 176, 0.2);
 }
 
 .moreCell img {
