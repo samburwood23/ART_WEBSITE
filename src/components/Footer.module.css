@@ -7,7 +7,8 @@
   font-size: 1.2rem;
   color: var(--color-accent-pink-soft);
   letter-spacing: 0.1em;
-  border-top: 2px solid var(--color-accent-pink);
+  border-top: 4px solid var(--color-accent-pink);
+  box-shadow: 0 -8px 14px -10px rgba(255, 79, 176, 0.9);
 }
 
 @media (max-width: 1100px) {

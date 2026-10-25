@@ -97,8 +97,8 @@
   font-size: 3.5rem;
   line-height: 1;
   letter-spacing: 0.04em;
-  color: var(--color-accent-pink);
-  text-shadow: 3px 3px 0 var(--color-accent-pink-deep);
+  color: var(--color-text);
+  text-shadow: var(--glow-pink);
 }
 
 .status {
@@ -116,7 +116,7 @@
   background: currentColor;
 }
 
-.statusAvailable { color: var(--color-accent-cyan); }
+.statusAvailable { color: var(--color-accent-orange); }
 .statusSold { color: var(--color-accent-pink); }
 .statusRequest { color: var(--color-accent-pink-soft); }
 
@@ -165,13 +165,13 @@
   font-size: 1.5rem;
   letter-spacing: 0.1em;
   padding: 0.75rem 1.25rem;
-  box-shadow: 4px 4px 0 var(--color-accent-cyan);
+  box-shadow: 0 0 20px var(--color-accent-pink), 4px 4px 0 var(--color-accent-red);
   transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .enquireBtn:hover {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 var(--color-accent-cyan);
+  box-shadow: 0 0 20px var(--color-accent-pink), 2px 2px 0 var(--color-accent-red);
 }
 
 .more {

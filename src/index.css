@@ -5,15 +5,19 @@
 }
 
 :root {
-  --color-bg: #1a0012;
-  --color-surface: #12000c;
-  --color-text: #ffe6f3;
-  --color-text-muted: #ffb3dc;
+  --color-bg: #120008;
+  --color-surface: #22000f;
+  --color-text: #ffe6f0;
+  --color-text-muted: #ffb8d6;
   --color-border: #ff4fb0;
   --color-accent-pink: #ff4fb0;
-  --color-accent-pink-soft: #ffb3dc;
-  --color-accent-pink-deep: #7a0046;
-  --color-accent-cyan: #7ef9ff;
+  --color-accent-pink-soft: #ffb8d6;
+  --color-accent-orange: #ff8a2a;
+  --color-accent-red: #ff3340;
+  --glow-pink: 0 0 6px #ff4fb0, 0 0 20px #ff4fb0;
+  --glow-pink-big: 0 0 6px #ff4fb0, 0 0 20px #ff4fb0, 0 0 48px #ff4fb0;
+  --glow-orange-big: 0 0 6px #ff8a2a, 0 0 20px #ff8a2a, 0 0 48px #ff8a2a;
+  --glow-red-big: 0 0 6px #ff3340, 0 0 20px #ff3340, 0 0 48px #ff3340;
   --font-pixel: 'VT323', monospace;
   --font-mono: 'IBM Plex Mono', monospace;
   --max-width: 1100px;
@@ -31,7 +35,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-image:
     radial-gradient(ellipse at 20% 50%, rgba(255,79,176,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(255,179,220,0.05) 0%, transparent 60%);
+    radial-gradient(ellipse at 80% 20%, rgba(255,138,42,0.05) 0%, transparent 60%);
 }
 
 a {
