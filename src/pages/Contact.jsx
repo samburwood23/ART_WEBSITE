@@ -12,10 +12,6 @@ export default function Contact() {
           samanthaburwood@gmail.com
         </a>
       </div>
-
-      <footer className={styles.footer}>
-        <span>✦ SAM BURWOOD ✦ SHEFFIELD ✦ {new Date().getFullYear()} ✦</span>
-      </footer>
     </main>
   )
 }

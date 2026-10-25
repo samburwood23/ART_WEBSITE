@@ -29,10 +29,6 @@ export default function Home() {
           <Link to="/works" className={styles.allWorksBtn}>✦ VIEW ALL WORKS ✦</Link>
         </div>
       </section>
-
-      <footer className={styles.footer}>
-        <span>✦ SAM BURWOOD ✦ SHEFFIELD ✦ {new Date().getFullYear()} ✦</span>
-      </footer>
     </main>
   )
 }

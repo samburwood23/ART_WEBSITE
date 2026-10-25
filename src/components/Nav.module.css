@@ -1,26 +1,6 @@
 .header {
+  border-top: 2px solid var(--color-accent-pink);
   border-bottom: 2px solid var(--color-accent-pink);
-}
-
-.marqueeWrap {
-  background: var(--color-accent-pink);
-  overflow: hidden;
-  padding: 0.25rem 0;
-}
-
-.marquee {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scroll 18s linear infinite;
-  font-family: var(--font-pixel);
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  color: #000;
-}
-
-@keyframes scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
 }
 
 .titleBar {

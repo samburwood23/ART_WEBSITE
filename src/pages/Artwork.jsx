@@ -133,10 +133,6 @@ export default function Artwork() {
           <img src={work.src} alt={work.title} onClick={e => e.stopPropagation()} />
         </div>
       )}
-
-      <footer className={styles.footer}>
-        <span>✦ SAM BURWOOD ✦ SHEFFIELD ✦ {new Date().getFullYear()} ✦</span>
-      </footer>
     </main>
   )
 }
