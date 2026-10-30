@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <main className={styles.main}>
       <div className={styles.box}>
-        <div className={styles.sectionLabel}>✦ CONTACT ✦</div>
+        <div className={styles.sectionLabel}>CONTACT</div>
         <p className={styles.body}>
           For enquiries, commissions, or just to say hello —
         </p>

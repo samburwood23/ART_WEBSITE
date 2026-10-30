@@ -12,11 +12,7 @@
   width: 100%;
   max-width: 600px;
   aspect-ratio: 4/5;
-  border: 3px solid var(--color-accent-pink);
-  box-shadow:
-    0 0 20px var(--color-accent-pink),
-    -10px 10px 0 var(--color-accent-orange),
-    -20px 20px 0 var(--color-accent-red);
+  border: 1px solid var(--color-frame);
   overflow: hidden;
   background: var(--color-surface);
 }
@@ -104,9 +100,5 @@
   }
   .frame {
     max-width: 100%;
-    box-shadow:
-      0 0 16px var(--color-accent-pink),
-      -6px 6px 0 var(--color-accent-orange),
-      -12px 12px 0 var(--color-accent-red);
   }
 }
