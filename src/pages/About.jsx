@@ -25,7 +25,7 @@ const timeline = [
 export default function About() {
   return (
     <main className={styles.main}>
-      <div className={styles.sectionLabel}>✦ ABOUT ✦</div>
+      <div className={styles.sectionLabel}>ABOUT</div>
 
       <section className={styles.hero}>
         <div className={styles.portrait}>
@@ -43,7 +43,7 @@ export default function About() {
           </p>
 
           <div className={styles.spec}>
-            <div className={styles.specHead}>✦ SPEC SHEET ✦</div>
+            <div className={styles.specHead}>SPEC SHEET</div>
             <dl>
               {spec.map(([label, value]) => (
                 <div key={label} className={styles.specRow}>
@@ -56,7 +56,7 @@ export default function About() {
         </div>
       </section>
 
-      <div className={styles.sectionLabel}>✦ TIMELINE ✦</div>
+      <div className={styles.sectionLabel}>TIMELINE</div>
       <ol className={styles.timeline}>
         {timeline.map(([year, title, text]) => (
           <li key={title}>
@@ -69,7 +69,7 @@ export default function About() {
         ))}
       </ol>
 
-      <div className={styles.sectionLabel}>✦ A FEW FAVOURITES ✦</div>
+      <div className={styles.sectionLabel}>A FEW FAVOURITES</div>
       <div className={styles.works}>
         {favourites.map(work => (
           <Link key={work.id} to={`/works/${work.id}`} className={styles.tile}>
@@ -83,7 +83,7 @@ export default function About() {
       </div>
 
       <div className={styles.cta}>
-        <Link to="/contact" className={styles.ctaBtn}>✦ COMMISSION A PIECE ✦</Link>
+        <Link to="/contact" className={styles.ctaBtn}>✦ COMMISSION A PIECE</Link>
       </div>
     </main>
   )

@@ -26,7 +26,7 @@ export default function Home() {
       </section>
 
       <section className={styles.gallerySection}>
-        <div className={styles.sectionLabel}>✦ SELECTED WORKS ✦</div>
+        <div className={styles.sectionLabel}>SELECTED WORKS</div>
         <div className={styles.grid}>
           {featured.map((work, i) => (
             <Link key={work.id} to={`/works/${work.id}`} className={styles.cell}>
@@ -38,7 +38,7 @@ export default function Home() {
           ))}
         </div>
         <div className={styles.allWorksLink}>
-          <Link to="/works" className={styles.allWorksBtn}>✦ VIEW ALL WORKS ✦</Link>
+          <Link to="/works" className={styles.allWorksBtn}>VIEW ALL WORKS</Link>
         </div>
       </section>
     </main>

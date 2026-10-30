@@ -12,6 +12,7 @@
   --color-border: #ff4fb0;
   --color-accent-pink: #ff4fb0;
   --color-accent-pink-soft: #ffb8d6;
+  --color-frame: rgba(255, 230, 240, 0.15);
   --color-accent-orange: #ff8a2a;
   --color-accent-red: #ff3340;
   --glow-pink: 0 0 6px #ff4fb0, 0 0 20px #ff4fb0;
