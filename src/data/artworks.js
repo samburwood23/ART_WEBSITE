@@ -441,7 +441,8 @@ export const artworks = [
   },
   {
     id: 41,
-    title: 'Untitled 1',
+    title: 'Deadlock',
+    description: 'Two orange and pink blocks meet at a corner on a black ground, each holding a scratched lilac spiral around a black square. Each waits for the other to let go.',
     year: 2026,
     medium: 'Mixed media',
     dimensions: '',
@@ -451,7 +452,8 @@ export const artworks = [
   },
   {
     id: 42,
-    title: 'Untitled 2',
+    title: 'Black Box',
+    description: 'Heavy black forms outlined in white and teal on raw canvas, split by a thin purple line. You can see its edges, never what\'s inside.',
     year: 2026,
     medium: 'Mixed media',
     dimensions: '',
@@ -461,7 +463,8 @@ export const artworks = [
   },
   {
     id: 43,
-    title: 'Untitled 3',
+    title: 'Interference',
+    description: 'Scraped black verticals over pale blue and hot pink inside a bright orange frame, scratched with arcs and a spiral in the corner. Signal and noise fighting for the same channel.',
     year: 2026,
     medium: 'Mixed media',
     dimensions: '',
@@ -471,7 +474,8 @@ export const artworks = [
   },
   {
     id: 44,
-    title: 'Untitled 4',
+    title: 'Hot Path',
+    description: 'White loops traced in cyan, yellow and magenta weave through hot pink on black, crossed by a single raised pink line. The route everything runs through.',
     year: 2026,
     medium: 'Mixed media',
     dimensions: '',
