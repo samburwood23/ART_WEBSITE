@@ -4,18 +4,15 @@
   padding-top: 14px;
 }
 
-/* Strip of real paint across the top, dripping down behind the name */
+/* Strip of real paint across the top */
 .header::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 56px;
-  background: url('/band.jpg') left top / auto 56px repeat-x;
-  -webkit-mask: var(--drips-band);
-  mask: var(--drips-band);
-  pointer-events: none;
+  height: 14px;
+  background: var(--band);
 }
 
 .titleBar {
