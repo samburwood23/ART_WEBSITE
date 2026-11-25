@@ -36,6 +36,9 @@ export default function Home() {
             </Link>
           ))}
         </div>
+        <div className={styles.galleryLink}>
+          <Link to="/gallery" className={styles.galleryBtn}>BROWSE THE GALLERY</Link>
+        </div>
       </section>
     </main>
   )

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { featured as artworks } from '../data/artworks'
+import { artworks } from '../data/artworks'
 import styles from './Artwork.module.css'
 
 const EMAIL = 'samanthaburwood@gmail.com'
@@ -21,8 +21,7 @@ function enquiryLink(work) {
 
 export default function Artwork() {
   const { id } = useParams()
-  const index = artworks.findIndex(a => String(a.id) === id)
-  const work = artworks[index]
+  const work = artworks.find(a => String(a.id) === id)
   const [fullscreen, setFullscreen] = useState(false)
 
   useEffect(() => {
@@ -41,14 +40,18 @@ export default function Artwork() {
     return (
       <main className={styles.main}>
         <p className={styles.notFound}>That painting couldn't be found.</p>
-        <Link to="/" className={styles.navLink}>← BACK</Link>
+        <Link to="/gallery" className={styles.navLink}>← GALLERY</Link>
       </main>
     )
   }
 
-  const prev = artworks[(index - 1 + artworks.length) % artworks.length]
-  const next = artworks[(index + 1) % artworks.length]
-  const more = [1, 2, 3, 4].map(n => artworks[(index + n) % artworks.length])
+  // Prev/next and "more" stay within the same medium as this piece
+  const group = artworks.filter(a => a.category === work.category)
+  const pos = group.indexOf(work)
+  const prev = group[(pos - 1 + group.length) % group.length]
+  const next = group[(pos + 1) % group.length]
+  const more = [1, 2, 3, 4].slice(0, group.length - 1).map(n => group[(pos + n) % group.length])
+  const back = `/gallery?medium=${encodeURIComponent(work.category)}`
   const status = STATUS[work.status]
 
   const details = [
@@ -61,10 +64,10 @@ export default function Artwork() {
   return (
     <main className={styles.main}>
       <div className={styles.topBar}>
-        <Link to="/" className={styles.navLink}>← BACK</Link>
+        <Link to={back} className={styles.navLink}>← GALLERY</Link>
         <div className={styles.pager}>
           <Link to={`/works/${prev.id}`} className={styles.navLink}>‹ PREV</Link>
-          <span className={styles.count}>{index + 1} / {artworks.length}</span>
+          <span className={styles.count}>{pos + 1} / {group.length}</span>
           <Link to={`/works/${next.id}`} className={styles.navLink}>NEXT ›</Link>
         </div>
       </div>
