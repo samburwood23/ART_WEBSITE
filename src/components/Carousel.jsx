@@ -18,6 +18,7 @@ export default function Carousel({ images }) {
     <div className={styles.carousel}>
       <button className={`${styles.arrow} ${styles.arrowLeft}`} onClick={prev}>◄</button>
 
+      <div className={styles.frameWrap}>
       <div className={styles.frame}>
         {images.map((img, i) => (
           <img
@@ -30,6 +31,7 @@ export default function Carousel({ images }) {
         <div className={styles.counter}>
           {current + 1} / {images.length}
         </div>
+      </div>
       </div>
 
       <button className={`${styles.arrow} ${styles.arrowRight}`} onClick={next}>►</button>

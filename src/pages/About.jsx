@@ -8,7 +8,7 @@ const favourites = [36, 31, 1, 33, 12, 40].map(id => artworks.find(a => a.id ===
 
 const spec = [
   ['Based in', 'Sheffield, UK'],
-  ['Works in', 'Mixed media, acrylic markers'],
+  ['Works in', 'Mixed media, acrylic markers, oil pastels'],
   ['Catalogued', `${artworks.length} works · 2025–2026`],
   ['Usual size', '50 × 60 cm'],
   ['Largest', '100 × 150 cm'],
@@ -16,7 +16,8 @@ const spec = [
 ]
 
 const timeline = [
-  ['2025', 'Markers No. 1–6', 'A first series in acrylic markers.'],
+  ['2025', 'Oil Pastels No. 1–21', 'A first series in oil pastels on paper, worked into and scratched back.'],
+  ['2025', 'Markers No. 1–6', 'A series in acrylic markers.'],
   ['2026', 'Mixed media series', 'Mixed media on 50 × 60 cm, from Stack Trace and Hotfix through to Triage and Dark Fibre.'],
   ['2026', 'First large works', 'Watchdog and Bus Topology, each 100 × 150 cm.'],
   ['2026', 'The quantum set', 'Superposition, Entanglement, Decoherence and Ground State.'],
@@ -34,7 +35,7 @@ export default function About() {
         <div className={styles.bio}>
           <h1 className={styles.title}>SAM<br />BURWOOD</h1>
           <p className={styles.lead}>
-            Artist based in Sheffield. Working in oil, acrylic markers, and geometric abstraction.
+            Artist based in Sheffield. Working in oil, oil pastels, acrylic markers, and geometric abstraction.
           </p>
           <p>C in GCSE Art but god loves a trier.</p>
           <p>
@@ -83,7 +84,7 @@ export default function About() {
       </div>
 
       <div className={styles.cta}>
-        <Link to="/contact" className={styles.ctaBtn}>✦ COMMISSION A PIECE</Link>
+        <Link to="/contact" className={styles.ctaBtn}>COMMISSION A PIECE →</Link>
       </div>
     </main>
   )

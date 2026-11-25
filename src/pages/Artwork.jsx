@@ -6,9 +6,9 @@ import styles from './Artwork.module.css'
 const EMAIL = 'samanthaburwood@gmail.com'
 
 const STATUS = {
-  available: { label: 'AVAILABLE', className: 'statusAvailable', cta: '✦ ENQUIRE ABOUT THIS PIECE' },
-  sold: { label: 'SOLD', className: 'statusSold', cta: '✦ ASK ABOUT A SIMILAR PIECE' },
-  'on request': { label: 'PRICE ON REQUEST', className: 'statusRequest', cta: '✦ ENQUIRE ABOUT THIS PIECE' },
+  available: { label: 'AVAILABLE', className: 'statusAvailable', cta: 'ENQUIRE ABOUT THIS PIECE →' },
+  sold: { label: 'SOLD', className: 'statusSold', cta: 'ASK ABOUT A SIMILAR PIECE →' },
+  'on request': { label: 'PRICE ON REQUEST', className: 'statusRequest', cta: 'ENQUIRE ABOUT THIS PIECE →' },
 }
 
 function enquiryLink(work) {

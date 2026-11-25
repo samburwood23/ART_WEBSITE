@@ -7,8 +7,8 @@ export default function Nav() {
   return (
     <header className={styles.header}>
       <div className={styles.titleBar}>
-        <Link to="/" className={styles.title}>SAM BURWOOD</Link>
-        <span className={styles.subtitle}>☆ GEOMETRIC ABSTRACT ART ☆</span>
+        <Link to="/" className={styles.title}>Sam Burwood</Link>
+        <span className={styles.subtitle}>Geometric abstract art · Sheffield</span>
         <nav className={styles.nav}>
           <Link to="/gallery" className={`${styles.navLink} ${pathname === '/gallery' || pathname.startsWith('/works') ? styles.navActive : ''}`}>GALLERY</Link>
           <Link to="/about" className={`${styles.navLink} ${pathname === '/about' ? styles.navActive : ''}`}>ABOUT</Link>

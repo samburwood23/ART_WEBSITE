@@ -1,23 +1,25 @@
 import { Link } from 'react-router-dom'
 import Carousel from '../components/Carousel'
+import Scratch from '../components/Scratch'
 import { featured } from '../data/artworks'
 import styles from './Home.module.css'
 
-const captionColors = [styles.captionPink, styles.captionOrange, styles.captionRed]
+const captionColors = [styles.captionPink, styles.captionOrange, styles.captionTeal, styles.captionMustard]
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
         <div className={styles.heroText}>
+          <Scratch className={styles.scratch} />
           <h1 className={styles.headline}>
-            <span className={styles.linePink}>GEOMETRIC</span>
-            <span className={styles.lineOrange}>ABSTRACT</span>
-            <span className={styles.lineRed}>ART ☆</span>
+            <span>GEOMETRIC</span>
+            <span className={styles.linePink}>ABSTRACT</span>
+            <span className={styles.lineOrange}>ART</span>
           </h1>
           <p className={styles.blurb}>Art that took longer than it looks.</p>
           <div className={styles.heroButtons}>
-            <a href="#work" className={styles.primaryBtn}>✦ SEE THE WORK</a>
+            <a href="#work" className={styles.primaryBtn}>SEE THE WORK ↓</a>
             <Link to="/contact" className={styles.secondaryBtn}>COMMISSION ME</Link>
           </div>
         </div>
@@ -32,7 +34,7 @@ export default function Home() {
               <div className={styles.thumb}>
                 <img src={work.thumb} alt={work.title} loading="lazy" />
               </div>
-              <span className={`${styles.caption} ${captionColors[i % 3]}`}>{work.title}</span>
+              <span className={`${styles.caption} ${captionColors[i % captionColors.length]}`}>{work.title}</span>
             </Link>
           ))}
         </div>
