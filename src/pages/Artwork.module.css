@@ -87,18 +87,20 @@
 }
 
 .category {
-  font-family: var(--font-label);
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
+  font-family: var(--font-tag);
+  font-size: 1.2rem;
   color: var(--paint-pink);
+  transform: rotate(-3deg);
+  transform-origin: left;
+  width: fit-content;
 }
 
 .title {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 4rem;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.01em;
   color: var(--color-text);
 }
 
@@ -173,13 +175,16 @@
   font-weight: 500;
   letter-spacing: 0.12em;
   padding: 0.9rem 1.25rem;
-  transition: transform 0.15s, background 0.15s, color 0.15s;
+  transform: rotate(-1deg);
+  box-shadow: 4px 4px 0 #000;
+  transition: transform 0.15s, background 0.15s, color 0.15s, box-shadow 0.15s;
 }
 
 .enquireBtn:hover {
   background: var(--paint-orange);
   color: var(--color-bg);
-  transform: translateY(-2px);
+  transform: rotate(0) translate(-1px, -1px);
+  box-shadow: 6px 6px 0 #000;
 }
 
 .more {
@@ -188,8 +193,9 @@
 
 .sectionLabel {
   font-family: var(--font-display);
-  font-size: 1.6rem;
-  letter-spacing: -0.01em;
+  font-size: 2.3rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   color: var(--color-text);
   margin-bottom: 1.25rem;
   display: flex;
@@ -273,7 +279,7 @@
     padding: 0 1rem 3rem;
   }
   .title {
-    font-size: 2.3rem;
+    font-size: 3rem;
   }
   .moreGrid {
     grid-template-columns: repeat(2, 1fr);

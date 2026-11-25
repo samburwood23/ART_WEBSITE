@@ -24,7 +24,8 @@
   /* Strip cut from real paintings and pastels */
   --band: url('/band.jpg') left center / auto 100% repeat-x;
 
-  --font-display: 'Archivo Black', 'Arial Black', sans-serif;
+  --font-display: 'Anton', 'Impact', sans-serif;
+  --font-tag: 'Permanent Marker', 'Comic Sans MS', cursive;
   --font-body: 'Archivo', system-ui, sans-serif;
   --font-label: 'IBM Plex Mono', ui-monospace, monospace;
   --max-width: 1100px;
@@ -40,8 +41,22 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  /* Faint grain so the ground reads as a surface, not a screen */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  /* Grain so the ground reads like a wall, not a screen */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E");
+}
+
+/* Overspray haze on the wall, like the marks around the canvases in the studio */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(38vmax 30vmax at 8% 12%, rgba(236, 31, 104, 0.13), transparent 70%),
+    radial-gradient(30vmax 26vmax at 96% 38%, rgba(25, 166, 182, 0.11), transparent 70%),
+    radial-gradient(34vmax 24vmax at 20% 96%, rgba(255, 123, 28, 0.08), transparent 70%),
+    radial-gradient(26vmax 22vmax at 80% 92%, rgba(168, 138, 216, 0.09), transparent 70%);
 }
 
 a {

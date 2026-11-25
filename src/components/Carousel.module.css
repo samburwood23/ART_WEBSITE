@@ -7,6 +7,37 @@
   padding: 0 3.5rem;
 }
 
+.frameWrap {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  transform: rotate(1deg);
+}
+
+/* Strips of masking tape holding the painting to the wall */
+.tape {
+  position: absolute;
+  z-index: 2;
+  width: 110px;
+  height: 30px;
+  background: rgba(232, 220, 190, 0.78);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  /* torn ends */
+  clip-path: polygon(3% 0, 97% 6%, 100% 30%, 96% 55%, 100% 82%, 97% 100%, 2% 94%, 0 70%, 4% 45%, 0 18%);
+}
+
+.tapeTop {
+  top: -14px;
+  left: -26px;
+  transform: rotate(-32deg);
+}
+
+.tapeBottom {
+  bottom: -12px;
+  right: -24px;
+  transform: rotate(-28deg);
+}
+
 .frame {
   position: relative;
   width: 100%;
@@ -14,7 +45,7 @@
   aspect-ratio: 4/5;
   overflow: hidden;
   background: var(--color-surface);
-  box-shadow: 10px 10px 0 var(--paint-plum);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.55);
 }
 
 .slide {
@@ -34,7 +65,7 @@
 .counter {
   position: absolute;
   bottom: 0.75rem;
-  right: 0.75rem;
+  left: 0.75rem;
   font-family: var(--font-label);
   font-size: 0.75rem;
   color: var(--color-text);

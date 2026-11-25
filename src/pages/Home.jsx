@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Carousel from '../components/Carousel'
 import Scratch from '../components/Scratch'
+import Drips from '../components/Drips'
 import { featured } from '../data/artworks'
 import styles from './Home.module.css'
 
@@ -14,8 +15,11 @@ export default function Home() {
           <Scratch className={styles.scratch} />
           <h1 className={styles.headline}>
             <span>GEOMETRIC</span>
-            <span className={styles.linePink}>ABSTRACT</span>
-            <span className={styles.lineOrange}>ART</span>
+            <span className={styles.linePink}>
+              ABSTRACT
+              <Drips className={styles.drips} />
+            </span>
+            <span className={styles.lineTag}>art</span>
           </h1>
           <p className={styles.blurb}>Art that took longer than it looks.</p>
           <div className={styles.heroButtons}>
