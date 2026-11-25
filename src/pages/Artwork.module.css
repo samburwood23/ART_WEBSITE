@@ -87,11 +87,12 @@
 }
 
 .category {
-  font-family: var(--font-tag);
-  font-size: 1.2rem;
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 1.3rem;
   color: var(--paint-pink);
-  transform: rotate(-3deg);
-  transform-origin: left;
   width: fit-content;
 }
 

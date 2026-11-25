@@ -103,8 +103,11 @@
 }
 
 .cellCategory {
-  font-family: var(--font-tag);
-  font-size: 1rem;
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 1.15rem;
   color: var(--color-text);
 }
 

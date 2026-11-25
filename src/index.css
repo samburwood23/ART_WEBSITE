@@ -28,7 +28,6 @@
   --drips-button: url('/drips-button.svg') left top / 160px 26px repeat-x;
 
   --font-display: 'Big Shoulders Stencil', 'Anton', 'Impact', sans-serif;
-  --font-tag: 'Permanent Marker', 'Comic Sans MS', cursive;
   --font-body: 'Archivo', system-ui, sans-serif;
   --font-label: 'IBM Plex Mono', ui-monospace, monospace;
   --max-width: 1100px;

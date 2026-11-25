@@ -61,18 +61,12 @@
   z-index: -1;
 }
 
-/* "art" sprayed on as a tag */
+/* ART sits in front of the pink drips */
 .lineTag {
   position: relative;
   z-index: 2;
-  font-family: var(--font-tag);
-  font-size: 0.82em;
-  line-height: 1;
   color: var(--paint-orange);
-  transform: rotate(-6deg) translate(0.9em, -0.05em);
-  transform-origin: left center;
   width: fit-content;
-  text-shadow: 3px 3px 0 var(--color-bg);
 }
 
 .blurb {
@@ -221,11 +215,12 @@
 }
 
 .caption {
-  font-family: var(--font-tag);
-  font-size: 1.05rem;
-  line-height: 1.2;
-  transform: rotate(-1.5deg);
-  transform-origin: left;
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 1.2rem;
+  line-height: 1.15;
 }
 
 .captionPink { color: var(--paint-pink); }

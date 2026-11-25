@@ -182,9 +182,12 @@
 }
 
 .captionTitle {
-  font-family: var(--font-tag);
-  font-size: 0.95rem;
-  line-height: 1.25;
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 1.05rem;
+  line-height: 1.15;
   color: var(--color-text);
 }
 

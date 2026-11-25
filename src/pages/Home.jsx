@@ -22,7 +22,7 @@ export default function Home() {
               ABSTRACT
               <Drips className={styles.drips} seed={3} count={14} maxLen={90} />
             </span>
-            <span className={styles.lineTag}>art</span>
+            <span className={styles.lineTag}>ART</span>
           </h1>
           <p className={styles.blurb}>Art that took longer than it looks.</p>
           <div className={styles.heroButtons}>
