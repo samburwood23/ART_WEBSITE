@@ -696,3 +696,10 @@ export const artworks = [
 ]
 
 export const categories = ['Painting', 'Markers', 'Oil Pastels']
+
+// The works shown on the site, in display order. Anything not listed here
+// stays in the data above but isn't shown.
+// Markers No. 6, Markers No. 5, Oil Pastels No. 2, No. 6, No. 21,
+// Clean Install, Night Shift, Interference
+const featuredIds = [24, 23, 46, 50, 65, 5, 12, 43]
+export const featured = featuredIds.map(id => artworks.find(a => a.id === id))
