@@ -1,18 +1,29 @@
 .footer {
+  position: relative;
   margin-top: 2rem;
+  padding-top: 14px;
 }
 
 .footer::before {
   content: '';
-  display: block;
-  height: 14px;
-  background: var(--band);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: url('/band.jpg') right top / auto 56px repeat-x;
+  -webkit-mask: var(--drips-band);
+  mask: var(--drips-band);
+  -webkit-mask-position: 220px 0;
+  mask-position: 220px 0;
+  pointer-events: none;
 }
 
 .inner {
+  position: relative;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem 2rem 2rem;
+  padding: 3rem 2rem 2rem;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -34,6 +45,6 @@
 
 @media (max-width: 600px) {
   .inner {
-    padding: 1.25rem 1rem 1.5rem;
+    padding: 2.75rem 1rem 1.5rem;
   }
 }

@@ -14,10 +14,13 @@ export default function Home() {
         <div className={styles.heroText}>
           <Scratch className={styles.scratch} />
           <h1 className={styles.headline}>
-            <span>GEOMETRIC</span>
+            <span className={styles.lineCream}>
+              GEOMETRIC
+              <Drips className={styles.drips} seed={11} count={9} maxLen={46} />
+            </span>
             <span className={styles.linePink}>
               ABSTRACT
-              <Drips className={styles.drips} />
+              <Drips className={styles.drips} seed={3} count={14} maxLen={90} />
             </span>
             <span className={styles.lineTag}>art</span>
           </h1>

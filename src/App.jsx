@@ -10,6 +10,13 @@ import Contact from './pages/Contact'
 export default function App() {
   return (
     <>
+      {/* Roughens heading edges so they read as sprayed through a stencil */}
+      <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
+        <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="4" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </svg>
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

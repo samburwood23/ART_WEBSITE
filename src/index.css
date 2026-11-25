@@ -23,8 +23,11 @@
 
   /* Strip cut from real paintings and pastels */
   --band: url('/band.jpg') left center / auto 100% repeat-x;
+  --drips-band: url('/drips-band.svg') left top / 640px 56px repeat-x;
+  --drips-rule: url('/drips-rule.svg') left top / 420px 40px repeat-x;
+  --drips-button: url('/drips-button.svg') left top / 160px 26px repeat-x;
 
-  --font-display: 'Anton', 'Impact', sans-serif;
+  --font-display: 'Big Shoulders Stencil', 'Anton', 'Impact', sans-serif;
   --font-tag: 'Permanent Marker', 'Comic Sans MS', cursive;
   --font-body: 'Archivo', system-ui, sans-serif;
   --font-label: 'IBM Plex Mono', ui-monospace, monospace;
@@ -57,6 +60,12 @@ body::before {
     radial-gradient(30vmax 26vmax at 96% 38%, rgba(25, 166, 182, 0.11), transparent 70%),
     radial-gradient(34vmax 24vmax at 20% 96%, rgba(255, 123, 28, 0.08), transparent 70%),
     radial-gradient(26vmax 22vmax at 80% 92%, rgba(168, 138, 216, 0.09), transparent 70%);
+}
+
+/* Headings: heavy stencil with edges roughened like sprayed paint */
+h1, h2, [data-stencil] {
+  font-weight: 900;
+  filter: url(#rough);
 }
 
 a {

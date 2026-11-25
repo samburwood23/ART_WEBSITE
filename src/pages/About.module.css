@@ -5,6 +5,8 @@
 }
 
 .sectionLabel {
+  filter: url(#rough);
+  font-weight: 900;
   font-family: var(--font-display);
   font-size: 2.3rem;
   font-weight: 400;
@@ -19,9 +21,13 @@
 .sectionLabel::after {
   content: '';
   flex: 1;
-  height: 6px;
-  background: var(--band);
-  opacity: 0.85;
+  align-self: flex-start;
+  margin-top: 0.62em;
+  height: 40px;
+  margin-bottom: -34px;
+  background: url('/band.jpg') left top / auto 40px repeat-x;
+  -webkit-mask: var(--drips-rule);
+  mask: var(--drips-rule);
 }
 
 .hero {
@@ -193,6 +199,7 @@
 }
 
 .ctaBtn {
+  position: relative;
   font-family: var(--font-label);
   font-size: 0.85rem;
   font-weight: 500;
@@ -209,6 +216,26 @@
   background: var(--paint-orange);
   border-color: var(--paint-orange);
   color: var(--color-bg);
+}
+
+
+/* Paint running off the bottom of the button */
+.ctaBtn::after {
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 6px;
+  right: 6px;
+  height: 26px;
+  background: var(--paint-pink);
+  -webkit-mask: var(--drips-button);
+  mask: var(--drips-button);
+  pointer-events: none;
+  transition: background 0.15s;
+}
+
+.ctaBtn:hover::after {
+  background: var(--paint-orange);
 }
 
 @media (max-width: 860px) {
