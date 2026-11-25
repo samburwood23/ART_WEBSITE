@@ -5,12 +5,12 @@
 }
 
 :root {
-  /* Studio ground: near-black with a plum cast, like the darker canvases */
-  --color-bg: #17121a;
-  --color-surface: #221a26;
-  --color-line: #3a2e3f;
+  /* Midnight navy ground, picking up the blues in the work */
+  --color-bg: #0f1a2e;
+  --color-surface: #17253d;
+  --color-line: #2a3b58;
   --color-text: #f4eee4;
-  --color-text-muted: #ada1ad;
+  --color-text-muted: #a3adbf;
 
   /* Paint colours, sampled from the work */
   --paint-pink: #ec1f68;
