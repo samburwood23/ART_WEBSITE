@@ -44,30 +44,8 @@
   color: var(--color-text);
 }
 
-.lineCream,
-.linePink {
-  position: relative;
-  width: fit-content;
-}
-
-.lineCream { color: var(--color-text); }
-.linePink { color: var(--paint-pink); z-index: 1; }
-
-/* Paint running off the bottom of ABSTRACT */
-.drips {
-  position: absolute;
-  left: 0;
-  top: 84%;
-  z-index: -1;
-}
-
-/* ART sits in front of the pink drips */
-.lineTag {
-  position: relative;
-  z-index: 2;
-  color: var(--paint-orange);
-  width: fit-content;
-}
+.linePink { color: var(--paint-pink); }
+.lineOrange { color: var(--paint-orange); }
 
 .blurb {
   position: relative;
@@ -238,9 +216,6 @@
     grid-template-columns: 1fr;
     gap: 2.5rem;
     padding-top: 2rem;
-  }
-  .drips {
-    height: 48px;
   }
   .scratch {
     width: 300px;

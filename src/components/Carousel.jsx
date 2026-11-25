@@ -19,8 +19,6 @@ export default function Carousel({ images }) {
       <button className={`${styles.arrow} ${styles.arrowLeft}`} onClick={prev}>◄</button>
 
       <div className={styles.frameWrap}>
-      <span className={`${styles.tape} ${styles.tapeTop}`} />
-      <span className={`${styles.tape} ${styles.tapeBottom}`} />
       <div className={styles.frame}>
         {images.map((img, i) => (
           <img
