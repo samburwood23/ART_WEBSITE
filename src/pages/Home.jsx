@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom'
 import Carousel from '../components/Carousel'
-import { artworks } from '../data/artworks'
+import { featured } from '../data/artworks'
 import styles from './Home.module.css'
 
-const featured = artworks.filter(a => a.id >= 33 && a.id <= 40)
 const captionColors = [styles.captionPink, styles.captionOrange, styles.captionRed]
 
 export default function Home() {
@@ -18,14 +17,14 @@ export default function Home() {
           </h1>
           <p className={styles.blurb}>Art that took longer than it looks.</p>
           <div className={styles.heroButtons}>
-            <Link to="/works" className={styles.primaryBtn}>✦ SEE THE WORK</Link>
+            <a href="#work" className={styles.primaryBtn}>✦ SEE THE WORK</a>
             <Link to="/contact" className={styles.secondaryBtn}>COMMISSION ME</Link>
           </div>
         </div>
         <Carousel images={featured} />
       </section>
 
-      <section className={styles.gallerySection}>
+      <section id="work" className={styles.gallerySection}>
         <div className={styles.sectionLabel}>SELECTED WORKS</div>
         <div className={styles.grid}>
           {featured.map((work, i) => (
@@ -36,9 +35,6 @@ export default function Home() {
               <span className={`${styles.caption} ${captionColors[i % 3]}`}>{work.title}</span>
             </Link>
           ))}
-        </div>
-        <div className={styles.allWorksLink}>
-          <Link to="/works" className={styles.allWorksBtn}>VIEW ALL WORKS</Link>
         </div>
       </section>
     </main>

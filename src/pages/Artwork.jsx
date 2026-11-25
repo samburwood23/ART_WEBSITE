@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { artworks } from '../data/artworks'
+import { featured as artworks } from '../data/artworks'
 import styles from './Artwork.module.css'
 
 const EMAIL = 'samanthaburwood@gmail.com'
@@ -41,7 +41,7 @@ export default function Artwork() {
     return (
       <main className={styles.main}>
         <p className={styles.notFound}>That painting couldn't be found.</p>
-        <Link to="/works" className={styles.navLink}>← ALL WORKS</Link>
+        <Link to="/" className={styles.navLink}>← BACK</Link>
       </main>
     )
   }
@@ -61,7 +61,7 @@ export default function Artwork() {
   return (
     <main className={styles.main}>
       <div className={styles.topBar}>
-        <Link to="/works" className={styles.navLink}>← ALL WORKS</Link>
+        <Link to="/" className={styles.navLink}>← BACK</Link>
         <div className={styles.pager}>
           <Link to={`/works/${prev.id}`} className={styles.navLink}>‹ PREV</Link>
           <span className={styles.count}>{index + 1} / {artworks.length}</span>

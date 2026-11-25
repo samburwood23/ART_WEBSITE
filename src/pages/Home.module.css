@@ -128,29 +128,6 @@
 .captionOrange { color: var(--color-accent-orange); }
 .captionRed { color: var(--color-accent-red); }
 
-.allWorksLink {
-  text-align: center;
-  padding: 2.5rem 0 1rem;
-}
-
-.allWorksBtn {
-  font-family: var(--font-pixel);
-  font-size: 1.4rem;
-  letter-spacing: 0.1em;
-  color: var(--color-bg);
-  background: var(--color-accent-pink);
-  border: 2px solid var(--color-accent-pink);
-  padding: 0.6rem 2rem;
-  box-shadow: 0 0 20px var(--color-accent-pink), 5px 5px 0 var(--color-accent-red);
-  transition: all 0.2s;
-  display: inline-block;
-}
-
-.allWorksBtn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 0 0 20px var(--color-accent-pink), 3px 3px 0 var(--color-accent-red);
-}
-
 @media (max-width: 860px) {
   .hero {
     grid-template-columns: 1fr;
