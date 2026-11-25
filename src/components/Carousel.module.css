@@ -12,9 +12,9 @@
   width: 100%;
   max-width: 600px;
   aspect-ratio: 4/5;
-  border: 1px solid var(--color-frame);
   overflow: hidden;
   background: var(--color-surface);
+  box-shadow: 10px 10px 0 var(--paint-plum);
 }
 
 .slide {
@@ -35,12 +35,12 @@
   position: absolute;
   bottom: 0.75rem;
   right: 0.75rem;
-  font-family: var(--font-pixel);
-  font-size: 1.1rem;
-  color: var(--color-accent-pink);
-  background: rgba(0,0,0,0.7);
-  padding: 0.1rem 0.5rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  color: var(--color-text);
+  background: rgba(21, 21, 21, 0.85);
+  padding: 0.15rem 0.5rem;
+  letter-spacing: 0.1em;
 }
 
 .arrow {
@@ -48,19 +48,19 @@
   top: 50%;
   transform: translateY(-50%);
   background: none;
-  border: 2px solid var(--color-accent-orange);
-  color: var(--color-accent-orange);
-  font-family: var(--font-pixel);
-  font-size: 1.5rem;
-  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  padding: 0.6rem 0.7rem;
   line-height: 1;
   z-index: 10;
   transition: all 0.15s;
 }
 
 .arrow:hover {
-  background: var(--color-accent-orange);
-  color: #000;
+  background: var(--paint-orange);
+  border-color: var(--paint-orange);
+  color: var(--color-bg);
 }
 
 .arrowLeft {
@@ -81,19 +81,21 @@
   width: 10px;
   height: 10px;
   background: none;
-  border: 2px solid var(--color-accent-pink);
+  border: 2px solid var(--color-text-muted);
   padding: 0;
-  transition: background 0.2s;
+  transition: background 0.2s, width 0.2s;
 }
 
 .dotActive {
-  background: var(--color-accent-pink);
+  width: 28px;
+  background: var(--paint-pink);
+  border-color: var(--paint-pink);
 }
 
 @media (max-width: 600px) {
   .arrow {
-    font-size: 1.1rem;
-    padding: 0.35rem 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.5rem;
   }
   .carousel {
     padding: 0 2.75rem;

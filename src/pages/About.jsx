@@ -83,7 +83,7 @@ export default function About() {
       </div>
 
       <div className={styles.cta}>
-        <Link to="/contact" className={styles.ctaBtn}>✦ COMMISSION A PIECE</Link>
+        <Link to="/contact" className={styles.ctaBtn}>COMMISSION A PIECE →</Link>
       </div>
     </main>
   )

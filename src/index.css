@@ -5,22 +5,28 @@
 }
 
 :root {
-  --color-bg: #120008;
-  --color-surface: #22000f;
-  --color-text: #ffe6f0;
-  --color-text-muted: #ffb8d6;
-  --color-border: #ff4fb0;
-  --color-accent-pink: #ff4fb0;
-  --color-accent-pink-soft: #ffb8d6;
-  --color-frame: rgba(255, 230, 240, 0.15);
-  --color-accent-orange: #ff8a2a;
-  --color-accent-red: #ff3340;
-  --glow-pink: 0 0 6px #ff4fb0, 0 0 20px #ff4fb0;
-  --glow-pink-big: 0 0 6px #ff4fb0, 0 0 20px #ff4fb0, 0 0 48px #ff4fb0;
-  --glow-orange-big: 0 0 6px #ff8a2a, 0 0 20px #ff8a2a, 0 0 48px #ff8a2a;
-  --glow-red-big: 0 0 6px #ff3340, 0 0 20px #ff3340, 0 0 48px #ff3340;
-  --font-pixel: 'VT323', monospace;
-  --font-mono: 'IBM Plex Mono', monospace;
+  /* Studio ground: near-black with a plum cast, like the darker canvases */
+  --color-bg: #17121a;
+  --color-surface: #221a26;
+  --color-line: #3a2e3f;
+  --color-text: #f4eee4;
+  --color-text-muted: #ada1ad;
+
+  /* Paint colours, sampled from the work */
+  --paint-pink: #ec1f68;
+  --paint-plum: #5a2560;
+  --paint-orange: #ff7b1c;
+  --paint-teal: #19a6b6;
+  --paint-cobalt: #2262b8;
+  --paint-mustard: #e3b518;
+  --paint-lilac: #a88ad8;
+
+  /* Strip cut from real paintings and pastels */
+  --band: url('/band.jpg') left center / auto 100% repeat-x;
+
+  --font-display: 'Archivo Black', 'Arial Black', sans-serif;
+  --font-body: 'Archivo', system-ui, sans-serif;
+  --font-label: 'IBM Plex Mono', ui-monospace, monospace;
   --max-width: 1100px;
 }
 
@@ -29,14 +35,13 @@ html {
 }
 
 body {
-  font-family: var(--font-mono);
-  background: var(--color-bg);
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(255,79,176,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(255,138,42,0.05) 0%, transparent 60%);
+  /* Faint grain so the ground reads as a surface, not a screen */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
 }
 
 a {
@@ -52,4 +57,9 @@ img {
 button {
   cursor: pointer;
   font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--paint-mustard);
+  outline-offset: 3px;
 }

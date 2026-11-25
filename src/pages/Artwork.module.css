@@ -20,21 +20,23 @@
 }
 
 .navLink {
-  font-family: var(--font-pixel);
-  font-size: 1.15rem;
-  letter-spacing: 0.08em;
-  color: var(--color-accent-pink);
-  border-bottom: 2px solid transparent;
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--color-text);
+  padding: 0.2rem 0;
+  border-bottom: 3px solid transparent;
   transition: border-color 0.2s;
 }
 
 .navLink:hover {
-  border-bottom-color: var(--color-accent-pink);
+  border-bottom-color: var(--paint-pink);
 }
 
 .count {
-  font-family: var(--font-pixel);
-  font-size: 1.15rem;
+  font-family: var(--font-label);
+  font-size: 0.8rem;
   color: var(--color-text-muted);
 }
 
@@ -55,7 +57,7 @@
   width: 100%;
   padding: 0;
   background: none;
-  border: 1px solid var(--color-frame);
+  border: none;
   cursor: zoom-in;
 }
 
@@ -85,29 +87,29 @@
 }
 
 .category {
-  font-family: var(--font-pixel);
-  font-size: 1.15rem;
-  letter-spacing: 0.12em;
-  color: var(--color-accent-pink);
+  font-family: var(--font-label);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  color: var(--paint-pink);
 }
 
 .title {
-  font-family: var(--font-pixel);
+  font-family: var(--font-display);
   font-weight: 400;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.02em;
   color: var(--color-text);
-  text-shadow: var(--glow-pink);
 }
 
 .status {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-family: var(--font-pixel);
-  font-size: 1.4rem;
-  letter-spacing: 0.1em;
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
 }
 
 .statusDot {
@@ -116,13 +118,13 @@
   background: currentColor;
 }
 
-.statusAvailable { color: var(--color-accent-orange); }
-.statusSold { color: var(--color-accent-pink); }
-.statusRequest { color: var(--color-accent-pink-soft); }
+.statusAvailable { color: var(--paint-teal); }
+.statusSold { color: var(--paint-pink); }
+.statusRequest { color: var(--paint-mustard); }
 
 .details {
-  border-top: 1px solid rgba(255, 79, 176, 0.3);
-  border-bottom: 1px solid rgba(255, 79, 176, 0.3);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
   padding: 1.25rem 0;
   display: flex;
   flex-direction: column;
@@ -137,18 +139,23 @@
 }
 
 .detailRow dt {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-top: 0.15rem;
   color: var(--color-text-muted);
 }
 
 .description {
-  font-size: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .price {
-  font-family: var(--font-pixel);
-  font-size: 2.1rem;
-  letter-spacing: 0.04em;
-  color: var(--color-accent-pink-soft);
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--color-text);
 }
 
 .enquire {
@@ -159,19 +166,20 @@
 .enquireBtn {
   display: block;
   text-align: center;
-  background: var(--color-accent-pink);
-  color: #000;
-  font-family: var(--font-pixel);
-  font-size: 1.5rem;
-  letter-spacing: 0.1em;
-  padding: 0.75rem 1.25rem;
-  box-shadow: 0 0 20px var(--color-accent-pink), 4px 4px 0 var(--color-accent-red);
-  transition: transform 0.15s, box-shadow 0.15s;
+  background: var(--paint-pink);
+  color: var(--color-text);
+  font-family: var(--font-label);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  padding: 0.9rem 1.25rem;
+  transition: transform 0.15s, background 0.15s, color 0.15s;
 }
 
 .enquireBtn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 0 0 20px var(--color-accent-pink), 2px 2px 0 var(--color-accent-red);
+  background: var(--paint-orange);
+  color: var(--color-bg);
+  transform: translateY(-2px);
 }
 
 .more {
@@ -179,24 +187,34 @@
 }
 
 .sectionLabel {
-  font-family: var(--font-pixel);
-  font-size: 1.5rem;
-  letter-spacing: 0.12em;
-  color: var(--color-accent-pink);
-  text-align: center;
-  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sectionLabel::after {
+  content: '';
+  flex: 1;
+  height: 6px;
+  background: var(--band);
+  opacity: 0.85;
 }
 
 .moreGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3px;
+  gap: 1rem;
 }
 
 .moreCell {
   aspect-ratio: 1;
   overflow: hidden;
-  border: 1px solid rgba(255, 79, 176, 0.2);
+  background: var(--color-surface);
 }
 
 .moreCell img {
@@ -213,7 +231,7 @@
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.92);
+  background: rgba(23, 18, 26, 0.96);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,26 +242,25 @@
   max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
-  border: 2px solid var(--color-accent-pink);
 }
 
 .close {
   position: absolute;
   top: 1.5rem;
   right: 2rem;
-  font-family: var(--font-pixel);
-  font-size: 1.2rem;
-  color: var(--color-accent-pink);
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  color: var(--color-text);
   background: transparent;
-  border: 2px solid var(--color-accent-pink);
-  padding: 0.3rem 1rem;
+  border: 2px solid var(--color-text);
+  padding: 0.4rem 1rem;
   letter-spacing: 0.08em;
   transition: all 0.2s;
 }
 
 .close:hover {
-  background: var(--color-accent-pink);
-  color: #000;
+  background: var(--color-text);
+  color: var(--color-bg);
 }
 
 .notFound {
@@ -256,7 +273,7 @@
     padding: 0 1rem 3rem;
   }
   .title {
-    font-size: 2.6rem;
+    font-size: 2.3rem;
   }
   .moreGrid {
     grid-template-columns: repeat(2, 1fr);
